@@ -1,0 +1,85 @@
+Deploying Simple HTML Page
+To deploy a simple HTML page, we need to ensure that apache is installed and configured on our host machine. So therefore, in this section we will:
+
+install Apache
+start the Apache service
+deploy a static webpage with images – This static webpage will leverage Ansible templates where it will display the text “Thank you for reading this post. My IP Address is <ip-address-of-instance>” and cloudacademy logo. To fetch the IP address of host, it will rely on Ansible Fact
+restart Apache once the deployment is over
+Before we move forward, let’s have a look at the high-level structure of this simple Ansible playbook.
+
+site.yml – starting point of our ansible playbook
+hosts – carrying hosts information
+roles/ - defining what each type of server has to perform
+       webservers/
+              tasks/ - tasks performed on webservers
+                     main.yml
+              handlers/ - running tasks under particular events
+                     main.yml
+              templates/ - configuration files which can reference variables
+                     index.html.j2
+              files/ - files to be copied to webservers
+                     cloud.png
+					 
+					 
+					 
+					 
+					 
+Lets go through the configuration file line by line and see how configuration works.
+hosts – points to Ansible hosts. Here’s a possible syntax:
+
+[webservers]
+10.0.0.156
+
+site.yml – the starting point for executing our Ansible playbook. Includes information 
+about hosts and roles associated with them.
+
+---
+- name: install and configure webservers
+hosts: webservers
+remote_user: ec2-user
+sudo: yes
+roles:
+   - webservers
+
+If we want to log into our host machines using a different username and with sudo privileges, we need to use the “remote_user” and “sudo: yes” parameter in our site.yml file. There can be additional parameters too, but they’re not needed right now. Here, 
+we have also defined roles granted to hosts in the [webservers] group.
+
+main.yml (Tasks) – This configuration file defines tasks to be 
+executed on hosts that have webservers roles granted. It looks like:
+---
+# This task installs and enables apache on webservers
+- name: ensure apache is installed
+yum: pkg=httpd state=latest
+- name: ensure apache is running
+service: name=httpd state=running enabled=yes
+- name: copy files to document root
+copy: src=cloud.png dest=/var/www/html/cloud.png
+- name: copy application code to document root
+template: src=index.html.j2 dest=/var/www/html/index.html
+notify: restart apache
+
+Since YAML files are so intuitive, we can easily see that this will install and run Apache on host instances and copy certain files and templates to the host’s document root.
+
+main.yml (handlers) – This configuration file defines the action to be performed only upon notification of tasks or state changes. In main.yml (tasks), we defined notify: restart apache handler which will restart Apache once the files and templates are copied to hosts.
+
+---
+- name: restart apache
+service: name=httpd state=restarted
+
+index.html.j2 (template) – a file you can deploy on hosts. However, template files also include some reference variables which are pulled from variables defined as part of an Ansible playbook or facts gathered from the hosts. Our index.html.j2 file looks like a regular html webpage with a referenced variable.
+
+<html>
+<head>
+    <title>CloudAcademy Ansible Demo</title>
+</head>
+<body>
+    <h1>
+        Thank you for reading this post. 
+        My IP Address is {{ ansible_eth0.ipv4.address }}
+    </h1>
+    <br/><br/><br/>
+    <p>
+        <img src="cloud.png" alt="CloudAcademy Logo"/>
+    </p>
+</body>
+</html>

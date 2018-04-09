@@ -1,0 +1,89 @@
+Basic Compenents in JIRA:-
+
+Issues
+Projects
+Components
+Workflows
+
+1. what is a Project?
+
+
+-> A Jira project is a collection of issues
+-> every issue belongs to a project.
+-> each project is identified by a Name and Key
+-> project key is a appended to each issue associated with the project.
+->Ex:-
+  Name of Project:Social Media Site.
+  Project Key: SM
+  Issue:SM_24 Add a new friend. 
+
+
+What is an issue?
+
+
+-> issue is the building block of the project.
+-> Depending on how your orgnization is using Jira, an issue cloud represent:
+  => a software bug
+  => a project task
+  => a helpdesk ticket
+  => a product improvement
+  => a leave request from client
+
+What is a component?
+
+
+-> Components are sub-section of a project.
+-> Components are used to group issues with in a project to smaller parts.
+ 
+ ex:-
+   Project 1:-
+  
+  UI         DB           Server       Bug
+
+issue 1     Isues 3      Issue 4     Issue 5
+issue 2
+            Issue 6   Issue 7   Issue 8  Issue 9
+
+
+What is a workflow?
+
+
+-> A JIRA Workflow is the set of statuses and transitions that an issue
+   goes thruogh during its lifecycle.
+-> workflows typically represent business processes.
+-> JIRA Comes with default workflow and it can be customized
+   to fit your organization.
+
+
+Workflow Status and Transitions:-
+
+Possible status       Possible Transitions
+
+Open                  Start Progress
+In Progress           Stop Progress
+Resolved              Resolve
+Closed                Reopen
+Reopened              Resolve & Close
+
+
+
+Course Overview:-
+
+Section 1:- JIRA Concepts
+
+Section 2:- JIRA Administration Tasks
+           => Projects
+           => User Management
+           => Group Management
+
+Section 3:- All About the Issues
+           => Creating Issues
+           => Updating and Editing Existing Issues
+           => Cloning, Linking, Creating Sub-Tasks and other action with issues.
+           => Workflow and Lifecycle of an issue.
+           => Jira Agile: Epics
+
+Section 4:- Search and Filters
+
+Section 5:- Reports.
+   

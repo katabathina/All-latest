@@ -1,0 +1,339 @@
+
+$ history | grep -i wget
+ 3084  05-02-17 10:45:21 sudo wget http://download.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm
+ 3413  05-11-17 09:52:23 wget https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz
+ 3441  05-11-17 15:48:11 wget https://github.com/git/git/archive/v2.13.0.tar.gz
+ 6893  06-30-17 13:47:18 wget "http://mirrorlist.centos.org/?release=5&arch=x86_64&repo=os"
+10002  03-14-18 01:56:38 history | grep -i wget
+[appadmin@Webserver /app/rrent/web_server]
+$ history | grep -i git
+ 3018  05-02-17 09:59:02 sudo yum install git
+ 3020  05-02-17 09:59:52 sudo yum install git
+ 3022  05-02-17 10:00:56 sudo yum install git-all
+ 3054  05-02-17 10:19:17 sudo yum install git
+ 3065  05-02-17 10:27:32 sudo yum install git
+ 3073  05-02-17 10:28:18 sudo yum install git
+ 3439  05-11-17 15:47:29 git
+ 3440  05-11-17 15:47:44 sudo yum install git-all
+ 3441  05-11-17 15:48:11 wget https://github.com/git/git/archive/v2.13.0.tar.gz
+ 3445  05-11-17 15:49:26 cd git-2.13.0/
+ 3450  05-11-17 15:52:19 git
+ 3453  05-11-17 15:52:45 rm -rf git-2.13.0/ python-2.7.5-48.el7.x86_64.rpm Python-3.4.3 Python-3.4.3.tar.xz 
+ 3456  05-11-17 15:54:42 git clone -b typhoon-integration https://github.testing.com/demos/eng-DevOps.git
+ 3537  05-15-17 11:00:53 git config ==global http.proxy http://testing.testing.net:80
+ 3538  05-15-17 11:01:38 git clone https://github.testing.com/demos/eng-DevOps.git
+ 3539  05-15-17 11:02:01 git clone https://github.testing.com/demos/eng-DevOps.git http.proxy $https_proxy 
+ 3540  05-15-17 11:02:13 git config --global
+ 3541  05-15-17 11:02:28 git config --global http.proxy $https_proxy 
+ 3542  05-15-17 11:02:33 git clone https://github.testing.com/demos/eng-DevOps.git
+ 3545  05-15-17 11:05:39 git config --global --unset http.proxy
+ 3550  05-15-17 11:08:08 git config --global http.proxy http://testing.testing.net:80
+ 3551  05-15-17 11:08:24 git clone https://github.testing.com/demos/eng-DevOps.git
+ 4826  05-23-17 12:40:41 ping https://github.testing.com/demos/eng-DevOps.git
+ 4827  05-23-17 12:40:47 ping github.testing.com
+ 4830  05-23-17 12:41:37 git clone https://github.testing.com/demos/eng-DevOps.git
+ 4831  05-23-17 12:42:00 git clone github.testing.com/demos/eng-DevOps.git
+ 4832  05-23-17 12:42:12 git clone http://github.testing.com/demos/eng-DevOps.git
+ 4833  05-23-17 12:52:11 ping github.testing.com
+ 4834  05-23-17 12:52:17 ping https://github.testing.com/demos/eng-DevOps.git
+ 4835  05-23-17 12:52:24 ping github.testing.com/demos/eng-DevOps.git
+ 4836  05-23-17 12:53:39 git clone https://github.testing.com/demos/eng-DevOps.git
+ 5475  05-31-17 11:27:03 git clone https://github.testing.com/mhaldeman/Slack_Programs.git
+ 5480  05-31-17 11:27:58 git clone https://github.testing.com/mhaldeman/Slack_Programs.git
+ 5481  05-31-17 11:28:25 git config --global --unset http.proxy
+ 5482  05-31-17 11:28:31 git config --global --unset https.proxy
+ 5483  05-31-17 11:28:56 git config --global http.proxy http://testing.testing.net:80
+ 5484  05-31-17 11:29:10 git clone https://github.testing.com/mhaldeman/Slack_Programs.git
+ 5485  05-31-17 11:32:00 git config --global --get http.proxy
+ 5486  05-31-17 11:34:41 curl https://github.testing.com/demos/eng-DevOps/archive/master.zip
+ 5488  05-31-17 11:35:20 ping github.testing.com
+ 5489  05-31-17 11:36:06 git config --global --get http.proxy
+ 5492  05-31-17 11:36:26 git config --global --unset http.proxy
+ 5493  05-31-17 11:36:28 git config --global --unset https.proxy
+ 5494  05-31-17 11:36:36 git clone https://github.testing.com/mhaldeman/Slack_Programs.git
+ 5499  05-31-17 11:37:09 git s
+ 5500  05-31-17 11:37:11 git status
+ 5503  05-31-17 11:37:31 mkdir bad-git-test
+ 5504  05-31-17 11:37:35 cd bad-git-test/
+ 5505  05-31-17 11:37:40 git clone https://github.testing.com/mhaldeman/Slack_Programs.git
+ 5535  05-31-17 12:48:24 rm -rf bad-git-test/
+ 5616  06-04-17 16:40:08 git clone https://github.testing.com/demos/eng-DevOps.git
+ 5625  06-04-17 16:42:50 git s
+ 5626  06-04-17 16:42:53 git status
+ 5627  06-04-17 16:42:55 git pull
+ 5783  06-04-17 17:09:34 git pull
+ 5784  06-04-17 17:09:44 git status
+ 5785  06-04-17 17:10:16 git reset
+ 5786  06-04-17 17:10:19 git status
+ 5787  06-04-17 17:10:23 git reset --hard
+ 5788  06-04-17 17:10:25 git status
+ 5791  06-04-17 17:11:57 git pull
+ 5884  06-12-17 14:58:42 git clone https://github.testing.com/mhaldeman/BAD.git
+ 5887  06-12-17 14:58:55 git status
+ 5888  06-12-17 14:59:08 git branch
+ 5889  06-12-17 14:59:36 git fetch
+ 5890  06-12-17 14:59:43 git branch
+ 5891  06-12-17 14:59:59 git branch -v -a
+ 5892  06-12-17 15:00:22 git checkout -b app-ops-snow origin/app-ops-snow
+ 5897  06-12-17 15:00:38 git checkout master
+ 5901  06-12-17 15:00:51 git branch
+ 5902  06-12-17 15:00:54 git checkout app-ops-snow
+ 6092  06-12-17 19:19:45 git clone https://github.testing.com/mhaldeman/BAD.git
+ 6109  06-12-17 19:51:32 git pull
+ 6209  06-15-17 18:34:01 git status
+ 6211  06-15-17 18:34:15 git status
+ 6212  06-15-17 18:34:48 git pull
+ 6213  06-15-17 18:35:07 git branch
+ 6214  06-15-17 18:35:14 git checkout master
+ 6229  06-16-17 10:33:16 git status
+ 6230  06-16-17 10:33:44 git pull origin master
+ 6233  06-16-17 10:33:58 git status
+ 6234  06-16-17 10:34:03 git pull origin development
+ 6243  06-16-17 10:39:43 git status
+ 6244  06-16-17 10:39:45 git pull
+ 6247  06-16-17 10:41:14 git clone git@github.testing.com:mhaldeman/BAD.git
+ 6251  06-16-17 10:41:41 git clone git@github.testing.com:mhaldeman/BAD.git
+ 6255  06-16-17 10:42:06 git clone git@github.testing.com:mhaldeman/BAD.git
+ 6256  06-16-17 10:45:22 git clone git@github.testing.com:mhaldeman/BAD.git
+ 6257  06-16-17 10:45:35 git clone https://github.testing.com/mhaldeman/BAD.git
+ 6258  06-16-17 10:46:16 ssh -T git@github.testing.com
+ 6259  06-16-17 10:47:18 git config --local -e
+ 6266  06-16-17 10:47:50 git config --local -e
+ 6267  06-16-17 10:48:42 git config --local url."https://".inteadOf git://
+ 6268  06-16-17 10:48:51 git status
+ 6269  06-16-17 10:48:53 git pull
+ 6272  06-16-17 10:50:50 git pull
+ 6280  06-16-17 10:51:39 git clone https://github.testing.com/mhaldeman/BAD.git
+ 6281  06-16-17 10:52:06 git clone git@github.testing.com:mhaldeman/BAD.git
+ 6282  06-16-17 10:52:13 ssh -T git@github.testing.com
+ 6283  06-16-17 10:52:36 sudo -u appadmin ssh -T git@github.testing.com
+ 6284  06-16-17 10:52:48 sudo ssh -T git@github.testing.com
+ 6285  06-16-17 10:53:50 git config --local
+ 6288  06-16-17 10:53:58 git config --local
+ 6290  06-16-17 10:54:02 git config --local
+ 6291  06-16-17 10:54:18 git config --local -e
+ 6292  06-16-17 10:55:10 git status
+ 6293  06-16-17 10:55:12 git pull
+ 6294  06-16-17 10:56:41 ssh -T -p 22 git@github.testing.com
+ 6295  06-16-17 10:56:53 ping github.testing.com
+ 6296  06-16-17 10:57:25 ssh -T -p 443 git@ssh.github.testing.com
+ 6297  06-16-17 10:57:36 ssh -T -p 443 git@ssh.github.com
+ 6303  06-16-17 11:36:37 git status
+ 6304  06-16-17 11:36:55 git pull
+ 6305  06-16-17 11:37:04 git pull origin development
+ 6306  06-16-17 11:37:12 git config --local -e
+ 6307  06-16-17 11:37:48 git pull origin development
+ 6315  06-16-17 11:38:56 git clone https://github.testing.com/mhaldeman/BAD.git
+ 6331  06-16-17 11:45:28 git pull https://test@github.com/mhaldeman/BAD.git
+ 6332  06-16-17 11:45:36 git pull
+ 6333  06-16-17 11:45:55 git pull https://test@github.com/mhaldeman/BAD.git
+ 6352  06-16-17 15:52:38 git pull https://github.testing.com/mhaldeman/BAD.git
+ 6353  06-16-17 15:53:14 git pull https://test:x-oauth-basic@github.testing.com/mhaldeman/BAD.git
+ 6401  06-16-17 16:03:10 git s
+ 6402  06-16-17 16:03:12 git status
+ 6403  06-16-17 16:03:22 git pull
+ 6405  06-16-17 16:03:39 git status
+ 6406  06-16-17 16:04:14 git pull
+ 6407  06-16-17 16:04:34 git checkout development
+ 6408  06-16-17 16:04:40 git push
+ 6450  06-16-17 16:32:19 git checkout development
+ 6452  06-16-17 16:32:25 git pull
+ 6486  06-16-17 18:43:08 git status
+ 6487  06-16-17 18:43:10 git pull
+ 6488  06-16-17 18:43:20 git branch
+ 6528  06-16-17 18:49:15 git branch
+ 6545  06-16-17 18:57:20 git branch
+ 6548  06-16-17 18:58:50 git status
+ 6549  06-16-17 18:58:52 git pull
+ 6550  06-16-17 18:59:00 git branch
+ 6764  06-29-17 13:36:40 git clone https://github.testing.com/mhaldeman/testing_workforce_analysis.git
+ 6776  06-29-17 13:52:06 git pull
+ 6777  06-29-17 13:52:22 git pull
+ 6794  06-29-17 14:55:45 bash <(curl -s -S -L https://git.io/install-gam)
+ 6802  06-29-17 15:24:22 git status
+ 6803  06-29-17 15:24:59 git status
+ 6804  06-29-17 15:25:03 git diff download_workforce.py 
+ 6805  06-29-17 15:25:08 git pull
+ 6810  06-29-17 16:34:42 git pull
+ 6818  06-29-17 16:39:20 git pull
+ 6825  06-29-17 16:42:01 git pull
+ 6831  06-29-17 16:42:52 git pull
+ 6851  06-30-17 10:43:20 git pull
+ 6929  06-30-17 19:15:50 git pull
+ 7008  06-30-17 20:39:20 git pull
+ 7010  06-30-17 20:39:35 git pull
+ 7015  06-30-17 20:41:30 git pull
+ 7019  06-30-17 20:42:31 git pull
+ 7044  07-01-17 09:26:55 git pull
+ 7046  07-01-17 09:27:07 git pull
+ 7077  07-05-17 09:42:25 git pull
+ 7084  07-05-17 09:56:52 git clone https://github.com/matthaldeman95/box-python-sdk.git
+ 7085  07-05-17 09:58:26 history | grep git clone
+ 7093  07-05-17 09:42:25 git pull
+ 7100  07-05-17 09:56:52 git clone https://github.com/matthaldeman95/box-python-sdk.git
+ 7101  07-05-17 09:58:26 history | grep git clone
+ 7102  07-05-17 09:58:31 history|grep git
+ 7110  07-05-17 10:18:57 git clone https://github.testing.com/mhaldeman/boxsdk.git
+ 7118  07-05-17 10:20:59 git pull
+ 7120  07-05-17 10:21:05 git pull
+ 7129  07-05-17 10:33:20 git pull
+ 7133  07-05-17 10:35:20 git pull
+ 7142  07-05-17 10:55:32 git pull
+ 7147  07-05-17 10:56:12 git pull
+ 7154  07-05-17 10:58:30 git pull
+ 7158  07-05-17 11:10:22 git pull
+ 7160  07-05-17 11:10:39 git pull
+ 7168  07-05-17 11:20:27 git pull
+ 7172  07-05-17 11:24:34 git pull
+ 7178  07-05-17 11:30:54 git pull
+ 7190  07-05-17 11:36:49 git pull
+ 7257  07-05-17 17:54:11 git pull
+ 7259  07-05-17 17:54:22 git pull
+ 7261  07-05-17 17:54:30 git pull
+ 7267  07-05-17 18:08:37 git pull
+ 7269  07-05-17 18:09:44 git pull
+ 7270  07-05-17 18:10:01 git pull
+ 7272  07-05-17 18:10:10 git pull
+ 7324  07-07-17 11:48:04 git pull
+ 7326  07-07-17 11:48:13 git pull
+ 7348  07-07-17 13:55:46 git pull
+ 7368  07-07-17 14:24:04 git pull
+ 7379  07-07-17 14:29:52 git pull
+ 7380  07-07-17 14:30:32 git pull
+ 7384  07-07-17 14:32:27 git pull
+ 7385  07-07-17 14:32:43 git rm box_report.py download_workforce.py google_report.py slack_report.py utils.py
+ 7387  07-07-17 14:33:03 git pull
+ 7400  07-07-17 14:44:54 git pull
+ 7402  07-07-17 14:45:03 git pull
+ 7409  07-07-17 14:45:25 git pull
+ 7441  07-07-17 15:25:32 git pull
+ 7523  07-10-17 11:10:05 git pull
+ 7527  07-10-17 11:52:48 git pull
+ 7529  07-10-17 12:04:22 git pull
+ 7531  07-10-17 12:06:03 git pull
+ 7532  07-10-17 12:06:11 git rm box_report.py
+ 7533  07-10-17 12:06:12 git pull
+ 7535  07-10-17 12:06:27 git pull
+ 7536  07-10-17 12:08:50 git pull
+ 7552  07-10-17 14:44:56 git pull
+ 7556  07-10-17 14:45:15 git pul
+ 7557  07-10-17 14:45:17 git pull
+ 7575  07-10-17 14:53:20 git pull
+ 7577  07-10-17 14:53:28 git pull
+ 7579  07-10-17 15:01:15 git pull
+ 7599  07-10-17 17:57:44 git pull
+ 7607  07-10-17 18:52:49 git status
+ 7608  07-10-17 18:53:36 git status
+ 7609  07-10-17 18:53:49 git diff BAD/settings.py
+ 7611  07-10-17 18:54:02 git status
+ 7612  07-10-17 18:54:05 git pull
+ 7613  07-10-17 18:54:13 git branch
+ 7614  07-10-17 18:54:15 git pull
+ 7692  07-12-17 10:35:56 git pull
+ 7696  07-12-17 15:06:55 git pull
+ 7697  07-12-17 15:07:18 git checkout development
+ 7725  07-13-17 10:10:14 git status
+ 7726  07-13-17 10:10:15 git pull
+ 7727  07-13-17 10:10:23 git checkout master
+ 7738  07-14-17 13:44:31 git pull
+ 7741  07-14-17 13:49:13 git pull
+ 7743  07-14-17 14:06:47 git pull
+ 7746  07-14-17 15:46:15 git pull
+ 7752  07-14-17 18:49:43 git pull
+ 7771  07-18-17 17:51:04 git pull
+ 7786  07-20-17 09:15:50 git pull
+ 7790  07-20-17 09:22:21 git pull
+ 7804  07-25-17 10:12:30 git pull
+ 7805  07-25-17 10:26:47 git pull --username mhaldeman --pasword 4fed2f7f1d83586d5428b151f97adf609f12828e
+ 7807  07-25-17 10:27:48 git pull https://4fed2f7f1d83586d5428b151f97adf609f12828e:x-oauth-basic@github.testing.com/mhaldeman/testing_workforce_analysis.git
+ 7811  07-25-17 10:30:58 git pull https://4fed2f7f1d83586d5428b151f97adf609f12828e:x-oauth-basic@github.testing.com/mhaldeman/testing_workforce_analysis.git
+ 7816  07-25-17 10:55:49 git pull https://4fed2f7f1d83586d5428b151f97adf609f12828e:x-oauth-basic@github.testing.com/mhaldeman/testing_workforce_analysis.git
+ 7898  08-25-17 20:28:49 git pull
+ 7899  08-25-17 20:29:09 git pull
+ 8046  08-28-17 13:23:29 git pull
+ 8048  08-28-17 13:23:54 git pull
+ 8143  08-29-17 10:35:01 git pull
+ 8215  08-30-17 11:21:00 git pull
+ 8221  08-30-17 11:21:47 git pull
+ 8231  08-30-17 11:24:08 git pull
+ 8232  08-30-17 11:24:13 git pull
+ 8236  08-30-17 14:47:31 git pull
+ 8238  08-30-17 14:47:54 git pull
+ 8317  09-05-17 20:22:58 git pull
+ 8318  09-05-17 20:23:13 git checkout master
+ 8421  09-19-17 14:35:53 git pull
+ 8422  09-19-17 14:35:57 git pull https://test:x-oauth-basic@github.testing.com/mhaldeman/BAD.git
+ 8424  09-19-17 14:36:44 rm .gitignore 
+ 8425  09-19-17 14:36:46 git pull https://test:x-oauth-basic@github.testing.com/mhaldeman/BAD.git
+ 8426  09-19-17 14:36:55 git branch
+ 8427  09-19-17 14:37:00 git checkout development
+ 8437  09-19-17 14:45:36 git pull
+ 8439  09-19-17 14:46:41 git pull https://test:x-oauth-basic@github.testing.com/mhaldeman/BAD.git
+ 8441  09-19-17 14:46:56 git pull
+ 8442  09-19-17 14:47:26 git config core.sharedRepository
+ 8443  09-19-17 14:47:34 git config core.sharedRepository group
+ 8444  09-19-17 14:47:38 git config
+ 8445  09-19-17 14:47:48 cd .git/objects/
+ 8450  09-19-17 14:48:27 git pull
+ 8451  09-19-17 14:48:33 git pull
+ 8453  09-19-17 14:50:07 git pull
+ 8454  09-19-17 14:50:12 git pull
+ 8477  09-19-17 20:17:58 git pull
+ 8479  09-19-17 20:18:19 git branch
+ 8480  09-19-17 20:18:22 git checkout development
+ 8481  09-19-17 20:19:29 git branch
+ 8482  09-19-17 20:19:37 git s
+ 8483  09-19-17 20:19:39 git status
+ 8484  09-19-17 20:19:59 git branch -d development
+ 8485  09-19-17 20:20:36 git checkout master
+ 8486  09-19-17 20:20:39 git branch
+ 8487  09-19-17 20:21:01 git pull origin development
+ 8491  09-19-17 20:22:40 git pull origin master
+ 8492  09-19-17 20:22:47 git branch
+ 8495  09-19-17 20:23:04 git pull
+ 8498  09-19-17 20:23:19 git pull
+ 8530  09-20-17 14:42:00 git pull origin master
+ 8555  09-20-17 14:50:32 git status
+ 8556  09-20-17 14:50:39 git branch
+ 8557  09-20-17 14:50:44 git checkout master
+ 8560  09-20-17 14:52:29 git diff origin/master..HEAD
+ 8561  09-20-17 14:53:26 git fetch --all
+ 8566  09-20-17 14:55:41 git reset --hard origin origin/master
+ 8567  09-20-17 14:55:49 git reset --hard master
+ 8574  09-20-17 14:57:03 git fetch --all
+ 8575  09-20-17 14:57:11 git reset --hard master
+ 8577  09-20-17 14:59:42 git branch
+ 8579  09-20-17 15:04:16 git reset --hard HEAD
+ 8580  09-20-17 15:04:19 git pull
+ 8581  09-20-17 15:04:24 git pull
+ 8592  09-20-17 15:11:54 git pull
+ 8593  09-20-17 15:11:59 git pull
+ 8594  09-20-17 15:12:14 git branch
+ 8595  09-20-17 15:12:19 git checkout development
+ 8667  09-21-17 13:33:54 git pull
+ 8669  09-21-17 13:34:16 git pull
+ 8777  10-05-17 14:45:35 git pull
+ 8779  10-05-17 14:46:30 git fetch origin/development
+ 8780  10-05-17 14:46:48 git fetch
+ 8783  10-05-17 14:47:06 git pull
+ 8797  10-05-17 19:33:28 git pull
+ 8798  10-05-17 19:33:51 rm .gitignore 
+ 8799  10-05-17 19:33:52 git pull
+ 8800  10-05-17 19:34:12 nano .gitignore
+ 8801  10-05-17 19:34:17 git pull
+ 8802  10-05-17 19:34:18 git fetch
+ 8804  10-05-17 19:34:46 git fetch origin master
+ 8822  10-05-17 19:38:39 git fetch --all
+ 8823  10-05-17 19:38:48 git reset --hard origin/master
+ 8836  10-05-17 19:41:57 git fetch --all
+ 8837  10-05-17 19:42:07 git reset --hard origin/master
+ 8955  10-16-17 11:10:02 git pull
+ 9033  10-26-17 11:22:17 git pull
+ 9373  11-08-17 09:12:14 git pull
+ 9374  11-08-17 09:12:29 git fetch
+ 9542  12-07-17 14:02:37 git pull
+ 9547  12-07-17 14:03:15 git fetch
+ 9549  12-07-17 14:04:12 git fetch
+ 9550  12-07-17 14:04:17 git fetch
+ 9552  12-07-17 14:04:32 git pull
+10003  03-14-18 01:57:28 history | grep -i git

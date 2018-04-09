@@ -1,0 +1,29 @@
+Familiar with Amazon AWS Cloud Administration which includes services like: 
+EC2, S3, EBS, VPC, ELB, AMI, SNS, RDS, IAM, Route 53, Auto Scaling, Cloud Front,
+Cloud Watch, Cloud Formation, Security Groups, Ansible, Chef,Ant, Maven,CloudWatch,Splunk.
+
+	Installed and configured Apache Web Server.
+	Deployed applications on multiple TOMCAT Instances and maintained Load balancing, High Availability and Fail over functionality
+	Created SSL  Certificates for secured communication between applications sign key tool
+	JDBC Connection Pool and Multipool configuration with MySql.
+	Drive applications release/deployment standards.
+	Monitoring TOMCAT server’s health and security. Tuning JVM heap size to maximize the number of clients accessing the applications.
+	Having good experience in TOMCAT twiddle command line utilities.
+	TOMCAT Administration, Monitoring and Troubleshooting using Tomcat Console.
+	Having good knowledge on monitoring tools Nagios,CloudWatch and Splunk.
+	Writing Automation Scripts to avoid manual / human efforts and errors.
+
+
+
+•	Around 4+ years of Professional Experience with Configuration Management, Build, Deploy and Release Management.
+•	Extensively worked with Version Control Systems GIT Hub.
+•	Proficiency in using with Ansible to Automate the Various deployment.
+•	Working experience in continuous integration using Git, GitHub, Maven, Jenkins, Chef.
+•	Expertise in using build tools like MAVEN and ANT for the building of deployable artifacts such as rar, jar, war & ear from source code.  Application Experience in Build tool like maven.
+•	Hands on experience in creating Chef Recipes, cookbooks for cloud automation (AWS) and Application deployment automation.
+•	Configured security groups, Network Access Control List, Routing Tables.
+•	Working knowledge on Continuous Integration and deployment using various CI tools like Jenkins.
+•	Experience is using Tomcat, Web logic and Web Sphere Application servers for deployments.
+•	Extensively used Code Commit, Code Pipeline.
+•	Experience in working withAmazon Web Services (AWS), Creating EC2 Instances and configuring all web Services like EC2, S3 bucket, RDS, EBS, ELB, ALB,Auto-Scaling, AMI, IAM through AWS Console.
+

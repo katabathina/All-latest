@@ -1,0 +1,124 @@
+What is Target gruop? Ans:- is the listeners gruop
+what is IGW?
+how to install tomcat?
+what is Devops?
+what is CI tool? and why you are using it?`
+how do you use the splunk?
+how do you monitor your environment? 
+Tell me the 50 linux commands?
+How do you use the ELK?
+what is difference b/w splunk and ELK?
+Can you write a playbook and install apache?
+Ansible Architecure?
+Tell me 10 modules which you know in Ansible?
+How do you do the deployments in your environment?
+Tell me what are the monitoring tools your using?
+I need five shell scripts?
+fibonosis series
+factorial series
+10 nubmers input i need the bigger and smaller number
+what is kafka and rabbit mq and active mq?
+what is performance monitoring tool in your environment
+Cloudformation templates for  -sg's,alb,s3,ec2,vpc?
+AWK,Sed---> 10 commands
+What is the recent issues you faced and how you solved?
+jenkin with jira integration?
+How do you intergrate github and webhook?
+
+
+
+www.test.com------------------->DNS resolver-------->top levedomain/Root server-->.com---->test.com---
+
+www.cloudengineers.org-
+
+
+
+aws --2 ec2(apache)---alb----
+
+4 name servers
+
+
+======================================
+TASKS:-
+Create a route 53 create a hosted zone?
+buy a domain and register in route 53 (Create a hosted zone with awsapps)and it will update in 4 name services in godaddy.
+map that record set with your own domain and map to alb.
+Alb:--Tg->2 ec2 machines(Apache start)www.domain.com/petclinc (Alb)-tg->tomcat->RDS.
+create a re-repleca for the existing rds?
+enable the alb login, install the splunk forwarder in the ec2 machines send the access and error log to splunk master.
+apche stop and target group unhealthy also alert has to come and mail.
+Install elk(Ec2 machine)->2 ec2 apache access and error log send to elk.
+
+whenever one jenkins job fails i need email.
+
+install nexus in one ec2 machine.
+
+in jenkins install jakoko cobactura testNG.
+
+cloud bees jenkins--> it is a rpm package (Enterprise edition)
+
+spinaaker-> setup->
+
+
+github.com--->account
+
+build tools--->ant(build.xml)---targets/maven(pom.xml)(goals)
+
+java-->jar/war/ear/zip/tar/tgz
+.net-->.msi/.exe/.bat/zip
+php--->zip
+android--->apk
+
+
+
+CI/CD
+
+10 devliver--->combine----test cases(junit)----->code quality coverage(jacoco/TestNg/sonarcube)---->
+
+delivery/artifact/package--->jenkins( /root/.jenkins/workspace/mvc-app/target/name.war/ear/zip/tar/tgz
+
+---->upload into artifactory(nexus/jfrog)--->snapshot/release
+
+http://ec2-18-219-57-101.us-east-2.compute.amazonaws.com:8081/nexus/content/repositories/releases/com/mkyong/spring3-mvc-maven-xml-hello-world/2.0/spring3-mvc-maven-xml-hello-world-2.0.war
+petclinic
+Agile--->Sprint---20 days--
+
+DEV- 2 ec2
+
+QAL- 2 ec2
+
+Pre-Prod- 5 ec2
+
+PROD- 5 ec2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+

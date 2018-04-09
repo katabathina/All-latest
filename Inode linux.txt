@@ -1,0 +1,55 @@
+
+
+what is inode?
+=================
+Inode Definition:- An inode is a data structure on a filesystem on Linux and other Unix-like operating systems that stores 
+all the information about a file except its name and its actual data. 
+A data structure is a way of storing data so that it can be used efficiently.
+
+
+what is inode usage?
+=======================
+An inode is a data structure used to keep information about a file on your hosting account. 
+The number of inodes indicates the number of files and folders you have. 
+This includes everything on your account, emails, files, folders, anything you store on the server.
+
+https://www.thegeekstuff.com/2010/09/linux-file-system-structure/
+
+geekstuff ----->link for all linux related topics
+
+
+Inode Basics:-
+===============
+An Inode number points to an Inode. An Inode is a data structure that stores the following information about a file :
+
+Size of file
+Device ID
+User ID of the file
+Group ID of the file
+The file mode information and access privileges for owner, group and others
+File protection flags
+The timestamps for file creation, modification etc
+link counter to determine the number of hard links
+Pointers to the blocks storing file’s contents
+
+================================
+
+lsof:-
+(list of Open Files)
+
+Its report a list of all open files and the processes that opend them.
+
+   the identification number of the process (PID) that has opened the file;
+   the process group identification number (PGID) of the process (optional);
+   the process identification number of the parent process (PPID) (optional);
+   the command the process is executing;
+   the owner of the process;
+
+   
+   Bring up the terminal, type lsof -i :8080
+   
+   $ lsof -i :8080
+   
+   
+   COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+   java    10165 mkyong   52u  IPv6 191544      0t0  TCP *:http-alt (LISTEN)

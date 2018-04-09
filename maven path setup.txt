@@ -1,0 +1,15 @@
+
+
+/opt/apache-maven-3.5.2/bin/mvn /opt/apache-maven-3.5.2/bin/mvn.cmd
+
+MAVEN_HOME="/home/YOUR_NAME/Downloads/apache-maven-3.1.1"
+export MAVEN_HOME
+PATH=$PATH:$MAVEN_HOME/bin
+
+MAVEN_HOME="/opt/apache-maven-3.5.2"
+export MAVEN_HOME
+PATH=$PATH:$MAVEN_HOME/bin
+
+after that next source /root/.bash_profile(maven home directory and where we set env)
+
+

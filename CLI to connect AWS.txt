@@ -1,0 +1,34 @@
+
+Access Key ID:
+AKIAJCRDXDVZBTFPMRLA
+
+
+Secret Access Key:
+0ewUy02PVEQCMT8kPoMP1mUZjvicBpEsFFSCls6Q
+
+
+Default region name [ap-south-1a]: ap-south-1
+reagion:
+ap-south-1
+=============================================================
+mine keys
+
+      ---Access Key ID:
+	  
+	  AKIAIYSQNSIU2FUXPW6Q 
+	  
+	  ----Secret Access Key:
+
+BSMOliEIaqpcUt928C4W8NZRYFIv6h190MyhJ1//     
+
+
+  us-east-2	
+
+aws configure
+
+access key
+
+secreate access key
+
+
+

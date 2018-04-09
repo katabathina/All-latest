@@ -1,0 +1,139 @@
+﻿
+20 useful Docker Command examples in Linux:-
+
+1 Verify Docker Version:-
+
+ docker --version
+
+2. View system wide Information.
+
+  docker info
+  
+3. Search Docker Images in its Registry Server
+
+   docker search debian
+
+4. Downloading Docker Container Images.
+
+   docker pull <Name-of-Image>
+    
+   docker pull ubuntu:14.04
+     
+5. List all Downloaded Docker Container Images.
+
+   docker images
+
+6. Launching a container with ‘docker run’ command
+
+   docker run -it -p 9000:80 --name=debian_container1 debian
+
+7. Launching a Container in detach mode.
+
+   docker run -it -d -p 9001:80 --name=web_container centos:7
+
+8. Getting Container Console with ‘docker attach’
+
+   Syntax: # docker attach {container_name or container_id}
+           
+    docker attach web_container
+9. List Containers with ‘docker ps’ command
+
+   docker ps’
+
+10. Start, Stop, Restart and Kill Containers
+
+     docker stop db_container1
+	 
+11. Delete / Remove a Container
+
+    Syntax: # docker rm {container_name_OR_container_id}
+	
+	docker rm db_container2
+	docker rm -f  web_container2
+	
+12. Delete / Remove Docker Container images
+
+   docker rmi ubuntu:14.04
+   
+13. Save and Load Docker Container Image to/from a tar file.
+
+    docker save debian -o mydebian.tar
+	
+	Load Docker Image from tar file:-
+	
+	docker load -i mydebian.tar
+
+14. Export and Import Container to / from tar archive
+
+    docker export container_name_or_id
+	
+	docker export web_container -o  web_container.tar
+	
+	docker import:-
+	
+	docker import web_container.tar
+	
+15. Display History of Docker Image
+
+    docker history {Image_Name_OR_Image_id}
+	
+	docker history ubuntu:16.04
+	
+16. Fetching Logs from the Container
+
+    docker logs {container_name_or_container_id}
+	
+	docker logs xibodocker_cms-web_1
+	
+	To fetch the live logs use ‘-f’ option in docker logs command:-
+	
+	docker logs -f  xibodocker_cms-web_1
+	
+17. Containers’ resource usage statistics
+    
+	(To Display CPU, memory, and network I/O usage of all the 
+	 containers use ‘docker stats‘)
+	 
+    docker stats
+	
+	Resource usage statistics without live streaming:-
+	
+	docker stats --no-stream
+	
+    We can display the running processes of a container with ‘docker top‘ command.:-
+	
+	Syntax: # docker top {Container_Name_OR_ID}
+	
+	docker top xibodocker_cms-web_1
+	
+18. Display Container IP address:-(‘docker inspect‘ command)
+
+    docker inspect web_container | grep IPAddress | cut -d '"' -f 4
+	
+	 or
+	
+	docker inspect -f "{{.NetworkSettings.IPAddress}}" web_container
+	
+19. Build Docker Container Images with Docker file
+  
+   (‘docker build‘ command we can build our own docker image with DockerFile.)
+   
+   docker build -t mycentos:web1 
+   
+20. Set Tag / Name to Docker Image
+
+ (‘docker tag’ command is used to set tag or name of docker image into a repository.)
+ 
+   Syntax : # docker tag source_image{:tag} target_image{:tag}
+   
+   docker tag centos:7 mycentos7:v1
+   
+=======================================
+
+
+
+
+	
+
+	 
+

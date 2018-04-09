@@ -1,0 +1,136 @@
+Sections- Git 5 labs
+AWS- 15 labs
+Jenkins - 50 jobs ( pipeline, dynamic choice params, webhooks,emails , ldap , problm matrix security). ( Anusha interview questions reference)
+Ansible - 10 
+( Apache installation )
+(Tomcat installation)
+( 5 war files deployment)
+(DB deployment )
+
+======================
+
+Task-1
+
+In Mumbai region 
+Create bastion machine ( 22 from anywhere ).
+create one alb and 2 ec2 machines.
+For elb security group 80 from anywhere.
+
+For 2 webservers.
+22 from bastion security group.
+80 from alb secrutity group is source.
+
+Attach two webservers with ec2 and assign the alb with your own doamin name. (tas1.your domain.com has to result to output).
+
+ans:-
+---
+1. ssh-22-anywhere(Bastion-sg)
+2. http-80-anywhere(elb-sg)
+3. webservers-sg
+ssh-22-bastionsg
+http-80-elb-sg
+
+create ALB:
+--
+Creating ALB will give sg(elb-sg)
+index path:index.html
+
+launch 3 servers-->
+1-bastion, 2-webservers
+->login to bastion and connect two webservers
+->in webservers install apachelike apache1 and apache2.
+-> goto apache cd /var/www/html
+-> create a index.html file for apache 1 and apache2
+->2 websevers attache to alb-target groups
+->take alb dns ip and add into route53.
+->first create a hosted zone
+->Next create a recordset and add alias name add albdns-ip.
+exp:tas1.cloudengineers.org
+=====================================================
+================================================
+
+
+
+Task-2--
+
+In Singapoor region
+
+Create bastion machine ( 22 from anywhere ).
+create one alb and 2 ec2 machines.
+For elb security group 8080 from anywhere.
+For 2 ec2 machines.
+22 from bastion security group.
+8080 from alb secrutity group is source.
+
+Attach two tomcat with ec2 and assign the alb with your own doamin name. (tas2.your domain.com has to result to output).
+
+
+ans:-
+---
+1. ssh-22-anywhere(Bastion-sg)
+2. http-8080-anywhere(elb-sg)
+3. webservers-sg
+ssh-22-bastionsg
+http-8080-elb-sg
+
+create ALB:
+--
+Creating ALB will give sg(elb-sg)-->
+here default http-80 is there-->change to http-8080
+path=/index.jsp
+
+launch 3 servers-->
+1-bastion, 2-webservers
+->login to bastion and connect two webservers
+->in webservers install tomat like tomcat1 and tomcat2.
+-> in tomcat1 and 2-->goto webappas->Root->index.jsp(delete inside content)
+-> in tomcat1 <h>this is tomcat1</h> in tomcat2 <h> this is tomcat2</h>
+->2 websevers attache to alb-target groups
+->take alb dns ip and add into route53.
+->first create a hosted zone
+->Next create a recordset and add alias name add albdns-ip.
+
+exp: in browser lo search "tas2.cloudengineers.org:8080"
+
+==========================================
+
+Task-3
+In us-west-2 region
+Create bastion machine ( 22 from anywhere ).
+create one alb and 2 ec2 machines.
+For elb security group 8080 from anywhere.
+For 4 ec2 machines
+ec2- first server - nexus installation
+ec2 - second server- Jenkins
+	
+other 2 ec2 machines install tomcats.
+
+22 from bastion security group.
+8080 from alb secrutity group is source.
+
+in Jenkin server	
+
+create a job for build and make it as auto scm poll.
+create second job for deploy in two tomcat servers.
+if i run build job it has to tirgger automatically deployment job.
+
+Attach two tomcat with ec2 and assign the alb with your own doamin name. (tas3.your domain.com has to result to output).
+
+=================================
+
+
+Task-4:-
+
+In east-1 region
+
+
+Create bastion machine ( 22 from anywhere ).
+create one alb and 2 ec2 machines.
+For elb security group 8080 from anywhere.
+For 4 ec2 machines.
+
+1)install ansible in first ec2 machine
+2) from ansible master server create play books to install tomcat in other second and third ec2 machine
+3) create a playbook to install apache in 4th httpd server
+Attach two tomcat with ec2 and assign the alb with your own doamin name. (tas4.your domain.com has to result to output).
+We are going to do above labs

@@ -1,0 +1,98 @@
+
+
+http://www.dreamsyssoft.com/unix-shell-scripting/variables-tutorial.php
+
+http://www.dreamsyssoft.com/unix-shell-scripting/loop-tutorial.php
+
+=============================================
+#!/bin/bash
+#apache atomatically stop after 15 minint
+
+apachestop="$(systemctl stop httpd)"
+
+echo "stop for apache=$apachestop apache is stopped"
+#echo " apache stop=`systemctl stop httpd`"
+==============================================
+
+#!/bin/bash
+#tomcat automatically stop after 15 minutes.
+
+tomcatstop="$(sh shutdown.sh)"
+
+echo "stop for tomcat=$tomcatstop tomcat is stopped"
+
+
+link of basic scripting/variables-tutorial
+
+Scripting:-
+
+#!/bin/sh
+# This program will print the head and 
+# tail of a file
+# passed in on the command line.
+
+echo "Printing head of $1..."
+head $1
+
+echo ""  #this prints an extra return...
+echo "Printing tail of $1..."
+tail $1
+
+Give this program a name of ht.sh (for Head Tail shell script), be sure to give it execute permission and then run it with the following command: 
+
+./ht.sh WEB_LOG   
+
+
+#!/bin/sh
+# This is my second script.
+VAR_1=Hello
+VAR_2=Unix
+
+echo "$VAR_1 $VAR_2"
+
+#!/bin/sh
+# This program will read the filename 
+# from user input.
+
+echo "Enter the file: "
+read FILENAME
+echo "Printing head of $FILENAME..."
+head $FILENAME
+
+echo ""  #this prints an extra return...
+echo "Printing tail of $FILENAME..."
+tail $FILENAME
+
+
+
+#!/bin/sh
+# This is some secure program that uses security.
+
+VALID_PASSWORD="secret" #this is our password.
+
+echo "Please enter the password:"
+read PASSWORD
+
+if [ "$PASSWORD" == "$VALID_PASSWORD" ]; then
+	echo "You have access!"
+else
+	echo "ACCESS DENIED!"
+fi
+
+=========================
+#!/bin/bash
+echo "Enter a Value"
+read a
+
+echo "Enter b value"
+read b
+
+if(a>b)
+then
+   echo "a: $a, is BIG";
+else
+   echo "b: $b, is BIG";
+fi
+========================
+
+

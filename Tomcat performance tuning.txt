@@ -1,0 +1,77 @@
+
+
+9th-01-2018
+
+1 i have to watch this video
+
+http://docs.ansible.com/ansible/latest/playbooks_intro.html  
+
+
+tomcat performance monitoring and tuning:-
+
+1. Application Overview
+
+2. Jconsole Overview (catalina Default JMX Categories)
+
+    -->Connector (server.xml->http traffic and ajp requests from Apache load balancer)
+	-->DataSource
+	-->Thread Pool
+	-->request Processor
+	-->global request processor	
+	
+3. Application testing parameter tuning
+ 
+   1) connection leak detection
+   
+    -->Apache jmeter setup
+	-->Connection pool setup
+	
+	
+4. Poorly tuned instances.
+
+ --> ajp Connector configuration
+   
+    <Connector port="8009" protocol="AJP/1.3" redirectPort="8443"/>
+
+  -->	Database pool configuration.
+      
+	  <Resource name="jdbc/productdb" auth="Container" type="javax.sql.DataSource"
+               maxTotal="10" maxIdle="30" maxWaitMillis="10000" logAbandoned="true"
+               username="root" password="admin" driverClassName="com.mysql.jdbc.Driver"
+               url="jdbc:mysql://localhost:3306/products"/>
+</Context>
+
+ -->  JVM settings
+   
+     We have set the minimum and maximum heap size to 1GB respectively as below:
+     
+	  export CATALINA_OPTS="-Xms1024m -Xmx1024m"
+	  
+	  
+5. Optimized Tomcat Instances
+
+  1. AJP Connector Configuration.
+   
+     <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" acceptorThreadCount="2" maxThreads="400" acceptCount="200" minSpareThreads="20"/>
+
+  2. Database Pool Configuration
+    
+	
+ 3. JVM Settings
+    
+	  
+	  
+	  export CATALINA_OPTS="-Xms2048m -Xmx2048m"
+
+
+JVM Heap Monitoring and Tuning
+
+
+     JAVA_OPTS="$JAVA_OPTS -verbose:gc -Xloggc:gc.log -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps"
+
+	 export CATALINA_OPTS="-Xms1024m -Xmx2048m -XX:MaxNewSize=512m -XX:MaxPermSize=256m"
+
+	 
+	 
+	 
+	BYTEMAN_OPTS="-Dorg.jboss.byteman.verbose=true -Dorg.jboss.byteman.transform.all -javaagent:/home/andy/Downloads/byteman-download-2.1.4.1/lib/byteman.jar=script:/home/andy/Downloads/byteman-download-2.1.4.1/rules/servletmonitor.btm,boot:/home/andy/Downloads/byteman-download-2.1.4.1/lib/byteman.jar,boot:/home/andy/Downloads/byteman-download-2.1.4.1/sample/lib/byteman-sample.jar,listener:true,port:9096,address:192.168.1.65"

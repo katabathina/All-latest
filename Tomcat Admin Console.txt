@@ -1,0 +1,88 @@
+
+
+Tomcat Admin console
+
+1 first lanch ec2-server
+
+2 install java--> yum install java* -yum
+
+3 goto browser downlaod tomcat8 (Copy link address)
+
+4 yum install wget -y
+
+5 wget tomcat8 copy link address
+
+6 change to /opt/tomcat8
+
+7 change tomcat8 directory permissions chmod -R 777 tomcat8
+
+8 next start the tomcat8 from bin downlaod ./startup.sh
+
+9. next go to browser and check http://13.58.200.105:8080
+
+10. for tomcat8 admin console create username and password from tomcat-users.xml
+
+(/opt/tomcat8/conf/tomcat-users.xml
+
+11 from browser https://www.mkyong.com/tomcat/tomcat-default-administrator-password/
+
+get the code 
+
+$TOMCAT_HOME/conf/tomcat-users.xml (Original)
+<tomcat-users>
+<!--
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <user username="tomcat" password="tomcat" roles="tomcat"/>
+  <user username="both" password="tomcat" roles="tomcat,role1"/>
+  <user username="role1" password="tomcat" roles="role1"/>
+-->
+</tomcat-users>
+
+
+$TOMCAT_HOME/conf/tomcat-users.xml (Updated)
+<tomcat-users>
+<!--
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <user username="tomcat" password="tomcat" roles="tomcat"/>
+  <user username="both" password="tomcat" roles="tomcat,role1"/>
+  <user username="role1" password="tomcat" roles="role1"/>
+-->
+
+	<role rolename="manager-gui"/>
+	<user username="admin" password="admin" roles="manager-gui"/>
+
+</tomcat-users>
+
+
+12. next restart tomcat8
+
+goto browser check http://13.58.200.105:8080/ 
+
+13. click "manager app"  if not open or manage console if get the error try below link
+
+https://stackoverflow.com/questions/36703856/access-tomcat-manager-app-from-different-host:
+
+14.  vi /opt/tomcat8/webapps/manager/META-INF/context.xml
+
+   <Context antiResourceLocking="false" privileged="true" >
+    <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+</Context>
+
+15 Change this file to comment the Valve:
+   
+   <Context antiResourceLocking="false" privileged="true" >
+    <!--
+    <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+    -->
+</Context>
+
+16. After that, refresh your browser (not need to restart Tomcat), you can see the manager page.
+
+ goto browser http://13.58.200.105:8080 and click manager app
+ 
+ now it will ask username and password and you will get login.
+

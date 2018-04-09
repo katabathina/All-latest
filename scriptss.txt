@@ -1,0 +1,20 @@
+
+links-
+
+
+http://www.thegeekstuff.com/2011/07/rotate-apache-logs/
+
+
+https://www.indiabix.com/computer-science/linux/
+
+http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/
+
+
+http://www.serveridol.com/2015/02/03/how-do-i-install-mod_jk-on-apache-2-4-webserver/
+
+
+
+arn === amazon resource name
+
+stack== combinations of resources
+

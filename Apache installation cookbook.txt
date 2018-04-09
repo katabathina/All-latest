@@ -1,0 +1,44 @@
+
+
+package 'httpd' do
+  action :install
+end
+
+service 'httpd' do
+  action [ :enable, :start ]
+end
+
+cookbook_file "/var/www/html/index.html" do
+  source "index.html"
+  mode "0644"
+end
+
+Creating the Index File:
+cd ~/chef-repo/cookbooks
+mkdir httpd/files
+echo "Installed and Setup Using Chef" > httpd/files/index.html
+
+
+execute 'httpd_firewall' do
+  command '/usr/bin/firewall-cmd  --permanent --zone public --add-service http'
+  ignore_failure true
+end
+
+execute 'reload_firewall' do
+  command '/usr/bin/firewall-cmd --reload'
+  ignore_failure true
+end
+
+
+If you send a request to your new webserver, you will get the welcome page whatever you put into the /var/www/html directory. This is due to the IncludeOptional conf.d/*.conf statement at the end of the /etc/httpd/conf/httpd.conf file that instructs Apache 
+to load the files finishing by *.conf located in the /etc/httpd/conf.d directory.
+
+If you really want to display the content of the /var/www/html directory, you need to go to the /etc/httpd/conf.d directory and remove all the files there (you can also rename them but with an extension different from .conf).
+
+Then, still in the /etc/httpd/conf.d directory, you can create a file (here mywebserver.conf) like below (the name doesn’t matter, only the extension in .conf):
+
+<Directory /var/www/html>
+AllowOverride None
+Require all granted
+</Directory>
+Now, every file created in the /var/www/html directory will be displayed by the webserver.

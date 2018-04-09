@@ -1,0 +1,56 @@
+﻿
+
+Broctagon Fintech Group:-
+28) how to move Jenkins form one pc to another?
+29) how to build a job with a specific branch(like master, dev, test, etc..)  in git repository. And also it has to pick the branch dynamically
+Ans: first i have to install plugin for multi branching  plugin, choose project type --mutli project branching)
+
+30) what is the use and purpose of origin key in git? (simply an alias that store the URL of repositories)
+31) dynamic choice parameter  and active parameter  in Jenkins
+32) how ssh works?
+33) what is symmetric?
+34) difference between symmetric encryption and asymmetric encryption?
+35) how dns works?
+36) what happens when we hit some website(like www.xyz.com) in browser?
+37) string parameter in Jenkins
+38) how we get back deleted data in remote repository?
+39) how to call multiple pom.xml at a time using Jenkins?
+40) how can we call pom.xml variable?
+41) how to modify auto scaling  group lifecyle webhook in aws?
+42) In Jenkins, suppose I have dynamic choice parameter  and in that parameter I gave some drop down list like a, b,c ,d,e… but 
+I want to select numbers instead of letters while building the job. How can you do it without changing the parameters manually?
+these are the questions asked me today...... 
+
+
+
+===============================
+
+Devops Assignment
+
+
+Script to deploy this app
+
+
+Set the environment variable MYRA__SENTRY_DSN with a sentry dsn obtained by signing up to https://sentry.io
+
+Instance details
+
+
+OS: Ubuntu 16.04; use ami-6edd3078
+Run the django app by running command python manage.py run server
+
+Server: Nginx
+
+
+Reverse proxy to the django app
+
+
+
+
+Secure the instance and the django webapp.
+
+
+You can use Ansible/Chef/Puppet or bash scripts to deploy above service.
+Secure your instance from any possible attacks.
+
+=========================================

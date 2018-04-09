@@ -1,0 +1,76 @@
+[serers]
+servr1
+server2
+server3
+
+ping server1
+
+
+#!/bin/bash
+for i in server1 server2 server3..server1000
+do
+ping $i
+
+done
+
+ansible -m "ping" servers
+
+CM-- Tools
+------------------
+patches
+files unique all servers
+installation
+deployments
+to create users/delete users/
+
+
+
+puppet--dsl
+chef----------ruby
+ansible----------python
+salt stack
+rex
+
+ansible-cli--free
+ansible-tower---license
+
+inventory file---servers files----hosts
+cmdb---->
+main configuration file----->ansible.cfg
+modules
+ping
+file
+copy
+get url
+
+comobo--playbook--------yaml
+
+ansible <group> -m "module> xxxxxxxx
+
+
+
+http://docs.ansible.com/ansible/latest/intro_adhoc.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Access Key ID:
+AKIAIV6H5NQ47UJO2KQQ
+Secret Access Key:
+NXnaKHVE8qqapmGxe2IVPm9SM19mZ3KR9Pc9FfVo
+
+region us-east-2

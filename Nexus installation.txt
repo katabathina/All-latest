@@ -1,0 +1,30 @@
+1. first launch server(EC2 machine)
+2. download oracle java rpm ,tomcat zip,apache-maven zip,nexus tar file and jenkins war file.
+3. yum install wget unzip -y
+4. rpm  -ivh java-rpm(package)
+5. unzip tomcat zip file --> cd /opt/tomcat/bin-->start
+6. cp jenkins war file to---> cd /opt/tomcat/webapps/jenkins
+7. tar --xvzf maven tar file and cp to ---> cd /opt/maven
+8. unzip nexus file cp to --> cd /opt/nexus
+9. cd /nexus/bin/ ---> vi nexus file --> 23 line (make uncomment "#RUN_AS_USER=" to RUN_AS_USER=root)
+10 cd /neuxs/bin/./nexus start -->
+11.IPaddress:8081/nexus--->nexus repository manager page will open(46.09)
+12. First name:sreedhar lastname:katabathina, company:systemadmin, phone no:9742898526,
+   what is your job level:manager, what is your area of responsibility:DevOps,Country:india,
+   region:--, zip or postal code:-560029, Email id:sreedhar.katabathina@gmail.com
+   
+   to mail below key will get to activate license
+   
+   07a0f9185f0f408716debbcb2b67e98f2b9af991
+   
+13. click login--> default username:admin, default password:admin123
+14. select repositories--> it will show the lists like snapshots and  releases (50.20)
+
+
+(if you want to install nexus in seperate server prequisite is java)
+
+
+the below link will helpful
+
+https://books.sonatype.com/nexus-book/2.11/reference/install.html
+

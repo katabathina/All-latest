@@ -1,0 +1,68 @@
+1.manage plugins:-->(advancded)upload plugin->nexus -jenkins upload.
+2.jenkins->manage jekins->configure system->
+sonatype nexus--> 
+ nexus repository manager server:nexus 2.2
+ Display name:nexus-artifactory
+ server id:12345
+ server url:http://35.163.208.8:8081/nexus/
+ 
+next down select add jenkins:
+
+give username:admin
+password:admin123
+
+and add
+
+next save.
+===
+next go to maven direcory-->bin-->conf-->setting.xm
+
+goto servers section:- update below code
+
+set nu:133 to 149:
+
+<server>
+<id>12345</id>
+<username>admin</username>
+<password>admin123</password>
+</server>
+
+<server>
+<id>InternalReleases</id>
+<username>admin</username>
+<password>admin123</password>
+</server>
+
+<server>
+<id>InternalSnapshots</id>
+<username>admin</username>
+<password>admin123</password>
+</server>
+
+and place the above conde in settings.xml
+
+goto jenkins:-
+
+job build:-
+
+build
+Execute shell: 
+/opt/apache-maven-3.5.2/mvn clean package
+
+down nexus repository manager:-
+nexus instance : nexus-artifatory
+nexus Repository: Releases
+
+packages:
+
+ group :com.mkyong
+arfifact:spring3-mvc-maven-xml-hello-world
+version:1.0
+packaging: war
+artifcats:
+   maven arfifact
+  File Path /
+
+
+
+

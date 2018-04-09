@@ -1,0 +1,33 @@
+1)How can you make a directories according to below scenario? 
+i.	A
+b.	/        \
+c.	B           C
+d.	/      \            \
+e.	D        E             F
+2)What is mean by (dot slash)   ./
+3)How can you merge data of A, B files to c file?
+4)How can you connect to mysql in Linux box?
+5)How can you check all running process?
+6)What is utility (advantage) in Linux? And what is the repository?
+7)How to check list of process?
+ 8)What kind of issues you resolve? At that time you can work individually or getting any call?
+9)What kind of P1, P2, and P3 you called? How long back you was working in production?
+10)What is SLA for P1, P2, and P3?
+11)What is incident how can you ensure that and where from you got the tickets?
+12)How can you assign the tickets to yourself? Explain entire process?
+13)What it will display
+#! /bin/bash
+If i=10
+Echo $? -i   
+
+$? is executes last command.
+
+14)Under /opt/app directory having two subdirectories like A and B,
+Inside A having 2 files with size of 300 MB, B having 3 files with size of 300mb? When i type ls-l under /app what is output?
+15)When I connect from server A to B 
+First time it take 15 sec and 2nd time it will take 20 sec and 3rd time it may take more time what is problem? How can you troubleshooting?
+16)what is difference between orphan and zombiee process?
+17) what is inode in linux?
+
+
+

@@ -1,0 +1,43 @@
+
+hostname change for redhat 7 linux server
+=====
+1. To change your hostname simply edit vi /etc/hostname file and inlcude name of your host.
+
+vi /etc/hostname
+rhel7
+:wq!
+
+2. To update your command prompt simply re-login and to apply this change system wide execute:
+
+systemctl restart systemd-hostnamed
+
+=========
+=========
+
+hostname change for redhat 6 linux server
+===
+1. To change your hostname simply edit vi /etc/sysconfig/network file and inlcude name of your host.
+
+vi /etc/sysconfig/network
+HOSTNAME=Katabathina
+:wq!
+
+2. Next update here vi /etc/hosts
+   192.168.88.128 Katabathina
+
+3. Next run below following commands:
+
+  hostname katabathina
+  hostname
+
+to effect above changes run below command:
+ 
+ service network restart
+
+========================================
+  
+
+
+
+
+	

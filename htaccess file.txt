@@ -1,0 +1,64 @@
+.
+
+================
+
+What is .htaccess?
+
+.htaccess is a configuration file for the Apache web server. It’s an extremely powerful tool, 
+that can be used to modify the Apache configuration without needing to edit the Apache configuration files. 
+The following sections describe how to create this configuration and use it to restrict directory listings and IP addresses, and to handle redirects.
+
+======================
+What is directory indexing?
+
+Directory indexing allows visitors to view a list of files instead of the actual webpage.
+When directory indexing is enabled, visitors can look inside any directory that does not have an index.html (or index.php, etc.) 
+file in it and browse the contents of the directory.
+
+=================================
+Turning off directory indexes?
+
+Place the following line in an .htaccess file in your domain's folder to disable directory indexes throughout your entire site:
+
+Options -Indexes
+
+Now, if someone tries to browse the contents of any directory of your site, they'll get a 403 (Forbidden) error.
+
+======================================================
+Turning on directory indexes for specific folders?
+
+If there's a particular directory in your site that you do want people to be able to browse, 
+simply create a new .htaccess file in that particular folder. Add the following:
+
+Options +Indexes
+
+This overrides the "global" setting and allows users to view the content of that directory.
+
+=========================
+Alternative index files?
+
+When a visitor accesses your website, the server checks the folder for an index file. Some examples of common index files are:
+
+
+index.htm
+index.html
+index.php
+index.cgi
+index.pl
+
+The supported index files depend on how the server is set up. DreamHost's servers are set to:
+
+DirectoryIndex index.html index.shtml index.htm Index.html Index.htm Index.shtml default.htm Default.htm default.html Default.html default.shtml 
+Default.shtml page1.html index.pl index.cgi index.php index.php3 index.phtml home.htm home.html home.shtml index.wml index.pcgi quickstart.html
+
+===================================
+Where to put your .htaccess file?
+
+Generally, you put the .htaccess file in your website's main directory. 
+However, the location ultimately depends on what you're attempting to do with the .htaccess file
+The .htaccess file can control behavior for every directory under the folder it resides in. 
+For this reason it can also be in your user's home directory. Again, it depends on what you're using the .htaccess file for.
+
+=====================================
+
+

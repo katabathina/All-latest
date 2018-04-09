@@ -1,0 +1,328 @@
+What is Devops?
+
+DevOps is not a technology or tool, it is a concept of behavior, and It is an 
+ extension of Agile Methodology.
+The DevOps is a set of practices designed to overcome the gap between 
+ development, QA and Operations by effective communication and collaboration,
+
+ incorporating continuous integration process with automated deployment.
+DevOps helps to increase an organization's speed to deliver applications and 
+ services. It allows organizations to serve their customers better and compete 
+ more strongly in the market.
+There are four basic continuous processes in DevOps:
+ Continuous Integration
+ Continuous Delivery
+ Continuous Testing
+ Continuous Monitoring
+
+Devops Life cycle?
+
+DevOps is deep integration between development and operations. Understanding DevOps is 
+ not possible without knowing DevOps lifecycle.
+1. Development:-
+In this DevOps stage the development of software takes place constantly. In this phase, 
+the entire development process is separated into small development cycles.
+ This benefits DevOps team to speed up software development and delivery process.
+2. Testing:-
+QA team use tools like Selenium to identify and fix bugs in the new piece of code.
+
+3.Integration:-
+In this stage, new functionality is integrated with the prevailing code, and 
+ testing takes place. Continuous development is only possible due to 
+ continuous integration and testing.
+4. Deployment:-
+
+ In this phase, the deployment process takes place continuously. 
+ It is performed in such a manner that any changes made any time in the code,
+ should not affect the functioning of high traffic application.
+
+5. Monitoring:-
+
+In this phase, operation team will take care of the inappropriate system behavior or
+ bugs which are found in production.
+ 
+====================================
+
+Popular Tool for DevOps Automation:
+
+> Git : Version Control System tool
+> Jenkins : Continuous Integration tool
+> Selenium : Continuous Testing tool
+> Puppet, Chef, Ansible : Configuration Management and Deployment tools
+> Nagios : Continuous Monitoring tool
+> Docker : Containerization tool
+
+How do all these tools work together?
+
+
+> This flow may vary from organization to organization as per the requirement.
+
+i. Developers develop the code and this source code is managed by Version Control System tools like Git etc.
+
+ii. Developers send this code to the Git repository and any changes made in the 
+ code is committed to this Repository.
+
+iii. Jenkins pulls this code from the repository using the Git plugin and build it 
+ using tools like Ant or Maven.
+iv. Configuration management tools like puppet deploys & provisions testing 
+ environment and then Jenkins releases this code on the test environment on 
+ which testing is done using tools like selenium.
+
+v. Once the code is tested, Jenkins send it for deployment on the production server (even production server is provisioned & maintained by tools like puppet).
+
+vi. After deployment It is continuously monitored by tools like Nagios.
+
+vii. Docker containers provides testing environment to test the build features.
+
+======================
+
+What is Target group?
+
+target group is used to route requests to one or more registered targets. When you create each listener rule, you specify a target group and conditions.
+ When a rule condition is met, traffic is forwarded to the corresponding target group. 
+Ex:- Instances Id or ip.
+=======================
+Ansible Galaxy?
+
+Ansible Galaxy is Ansible's official community hub for sharing Ansible roles. 
+A role is the Ansible way of bundling automation content and making it reusable.
+
+======================
+
+What’s an ad-hoc command?
+
+An ad-hoc command is something that you might type in to do something really quick,
+but don’t want to save for later.
+===========================
+
+Ansible modules:-
+=========
+1. ping hosts
+
+ansible <HOST_GROUP> -m ping
+
+2. Display gathered facts
+
+ansible <HOST_GROUP> -m setup | less
+
+3. Filter gathered facts
+
+ansible <HOST_GROUP> -m setup -a "filter=ansible_distribution*"
+
+4. To transfer a file directly to many servers:
+
+ansible atlanta -m copy -a "src=/etc/hosts dest=/tmp/hosts"
+
+5. The file module allows changing ownership and permissions on files. 
+  These same options can be passed directly to the copy module as well.
+
+  ansible webservers -m file -a "dest=/srv/foo/a.txt mode=600"
+  ansible webservers -m file -a "dest=/srv/foo/b.txt mode=600 owner=mdehaan group=mdehaan"
+  
+  the file module can also create directories, similar to mkdir -p
+  
+  ansible webservers -m file -a "dest=/path/to/c mode=755 owner=mdehaan group=mdehaan state=directory"
+  
+6. Ensure a package is installed, but don’t update it:
+ 
+  ansible webservers -m yum -a "name=acme state=present"
+  
+7. The ‘user’ module allows easy creation and manipulation of existing user accounts, 
+ as well as removal of user accounts that may exist:(users and groups)
+ 
+ ansible all -m user -a "name=foo state=absent"
+ 
+8. Deploy your webapp straight from git: (Deploying from source control)
+
+  ansible webservers -m git -a "repo=https://foo.example.org/repo.git dest=/srv/myapp version=HEAD"
+  
+9. Ensure a service is started on all webservers:(Managing services)
+
+   ansible webservers -m service -a "name=httpd state=started"
+   
+10. Time limited background operations
+ 
+  Long running operations can be run in the background, and it is possible to check their status later.
+  For example, to execute long_running_operation asynchronously in the background, with a timeout of 
+  3600 seconds -B , and without polling -P.
+  
+    ansible all -B 3600 -P 0 -a "/usr/bin/long_running_operation --do-stuff"
+	
+
+link:-
+
+docs.ansible.com/ansible/latest/intro_adhoc.html
+
+	
+====================================================
+
+AWK,Sed---> 10 commands
+
+===============
+
+AWK ("Aho, Weinberger, and Kernighan,"):-
+
+https://www.computerhope.com/unix/uawk.htm
+
+ awk syntax:-
+ 
+    awk [ -F fs ] [ -v var=value ] [ 'prog' | -f progfile ] [ file ... ]
+
+awk examples:-
+
+1. Print only lines of the file text.txt that are longer than 72 characters.
+  
+  awk 'length($0) > 72' text.txt
+
+2. Print first two fields of data in opposite order. For example, if the file data.
+   txt contains the lines:
+ 
+   awk '{ print $2, $1 }' data.txt
+   
+3. The above command executes the awk program in prog.awk to process the contents of
+   file file.txt.
+   
+   awk -f prog.awk file.txt
+   
+4. Print all the lines from a file.
+
+    (By default, awk prints all lines of a file , 
+	so to print every line of above created file use below command :)
+  
+   awk ‘{print;}’ awk_file
+   
+5. Print only Specific field like 2nd & 3rd.
+
+   awk -F “,” ‘{print $2, $3;}’ awk_file
+   
+6. Print the lines which matches the pattern.
+   
+   (I want to print the lines which contains the word “Hari & Ram”)
+   
+   awk ‘/Hari|Ram/’ awk_file
+   
+7. How do we find unique values in the first column of name.
+ 
+   awk -F, ‘{a[$1];}END{for (i in a)print i;}’ awk_file
+   
+8. How to find the sum of data entry in a particular column.
+
+     awk -F, ‘$1==”Item1″{x+=$2;}END{print x}’ awk_file
+	 
+	 awk -F, ‘$1==”Ram”{x+=$2;}END{print x}’ awk_file
+
+9.  How to find the  total of all numbers in a column.
+ 
+   (eg we take the 2nd and the 3rd column.)
+   
+   awk -F”,” ‘{x+=$2}END{print x}’ awk_file
+   
+   awk -F”,” ‘{x+=$3}END{print x}’ awk_file
+   
+10. How to find the sum of individual group records.
+
+   (Eg if we consider the first column than we can do the summation for 
+     the first column based on the items)
+   
+     awk -F, ‘{a[$1]+=$2;}END{for(i in a)print i”, “a[i];}’ awk_file
+
+11. How to find the sum of all entries in second column  and append it 
+    to the end of the file.
+	
+	awk -F”,” ‘{x+=$2;y+=$3;print}END{print “Total,”x,y}’ awk_file
+	
+12. How to find the count of entries against every column based on the first column:
+ 
+   awk -F, ‘{a[$1]++;}END{for (i in a)print i, a[i];}’ awk_file
+   
+13. How to print only the first record of every group:
+
+   awk -F, ‘!a[$1]++’ awk_file
+   
+==========================================
+
+SED:- (Stream Editor)
+
+ sed is allows you to filter and transform text.
+ 
+Syntax:-
+  sed OPTIONS... [SCRIPT] [INPUTFILE...]
+  
+  https://www.computerhope.com/unix/used.htm
+  
+Sed Examples:-
+
+1. Double-spaces the contents of file myfile.txt, and writes the output to 
+   the file newfile.txt
+
+   sed G myfile.txt > newfile.txt
+   
+   (To insert two blank lines, do:)
+   
+   sed 'G;G' myfile.txt
+
+2. Prefixes each line of myfile.txt with a line number, a period, 
+   and a space, and displays the output.
+   
+   sed = myfile.txt | sed 'N;s/\n/\. /'
+   
+3. Searches for the word "test" in myfile.txt and replaces 
+   every occurrence with the word "example".
+   
+   sed 's/test/example/g' myfile.txt > newfile.txt
+   
+4. Counts the number of lines in myfile.txt and displays the results.
+  
+   sed -n '$=' myfile.txt
+   
+https://www.tecmint.com/linux-sed-command-tips-tricks/
+
+5. Viewing a range of lines of a document.
+   
+   (The following sed one-liner will return lines 5 through 10 from myfile.txt:)
+   
+   sed -n '5,10p' myfile.txt
+   
+6. Viewing the entire file except a given range.
+
+  (it’s possible that you want to print the entire file except a certain range.
+  To exclude lines 20 through 35 from myfile.txt, do:)
+  
+  sed '20,35d' myfile.txt
+  
+7. Viewing non-consecutive lines and ranges
+ 
+  (Let’s display lines 5-7 and 10-13 from myfile.txt:)
+  
+   sed -n -e '5,7p' -e '10,13p' myfile.txt
+   
+8. To replace multiple blank spaces with a single space, we will use the output of
+   "ip route show" and pipeline.
+   
+   ip route show | sed 's/  */ /g'
+   
+9. Replacing words or characters inside a range.
+
+   (replacing words only within a line range (30 through 40, for example), you can do:)
+   
+   sed '30,40 s/version/story/g' myfile.txt
+   
+10. Performing two or more substitutions at once.
+  
+    (You can combine two or more substitutions one single sed command. Let’s replace 
+	the words that and line in myfile.txt with This and verse, respectively.)
+	
+	sed -i 's/that/this/gi;s/line/verse/gi' myfile.txt
+
+=============================================================
+
+
+	
+
+  
+
+
+   
+	
+ 
+  

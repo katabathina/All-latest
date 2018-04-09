@@ -1,0 +1,42 @@
+
+
+https://bash.cyberciti.biz/monitoring/get-system-information-in-html-format/ for scripting
+
+https://bash.cyberciti.biz/shell/backup/
+
+scripting links
+
+/opt/apache-maven-3.5.2/bin
+
+
+export PATH=$PATH:/appropriate/directory
+
+export command
+========================
+
+linux techi	https://www.linuxtechi.com/category/linux-commands/page/3/
+
+the above link is very useful.
+======================
+1. find the sreedhar file and print on the screen
+
+find / -name sreedhar -type f -print
+find / -name sreedhar -type f
+find /usr /home -name sreedhar -type f  ---> searching sreedhar file in /usr and /home directory only.
+
+https://alvinalexander.com/unix/edu/examples/find.shtml#basic-find-command-examples
+
+https://alvinalexander.com/unix/edu/examples/find.shtml#basic-find-command-examples
+
+https://alvinalexander.com/unix/edu/examples/find.shtml
+
+==============================================
+
+Domain providers
+
+http://my.dot.tk
+
+Domain name:ksrgroups.ml
+
+Username:sreedhar.katabathina@gmail.com
+passwd: sree2016

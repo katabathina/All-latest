@@ -1,0 +1,170 @@
+	
+
+Create a simple chef cookbook.
+==================================
+https://www.itzgeek.com/how-tos/linux/centos-how-tos/create-a-simple-chef-cookbooks-to-manage-your-centos-rhel-infrastructure.html
+
+
+
+In this portion, we will create a simple cookbook to install and configure an Apache web server.
+
+1 .Log into your Chef workstation, go to your ~/chef-repo/cookbooks directory.
+ 
+  cd ~/chef-repo/cookbooks/
+
+2. Create the cookbook called “httpd“. Replace “httpd“, if you want to name it differently.
+
+    chef generate cookbook httpd
+
+3. Go to your newly created cookbook’s directory, i.e., httpd
+   
+   cd httpd
+   
+   output come like below:-
+   
+     rw-r--r--. 1 root root   47 Nov 12 21:18 Berksfile
+-rw-r--r--. 1 root root 1133 Nov 12 21:18 chefignore
+-rw-r--r--. 1 root root  568 Nov 12 21:18 metadata.rb
+-rw-r--r--. 1 root root   53 Nov 12 21:18 README.md
+drwxr-xr-x. 2 root root   23 Nov 12 21:18 recipes
+drwxr-xr-x. 3 root root   38 Nov 12 21:18 spec
+drwxr-xr-x. 3 root root   20 Nov 12 21:18 test
+
+4.  Go to the recipes directory. There you can see a file called “default.rb“. 
+     We are going to use this file to add resources for that are required for getting the Apache server running.
+	 
+     cd recipes
+     cat default.rb
+	 
+5. Install Apache:
+
+To begin, let’s add a resource for installing apache package.
+
+   package 'httpd' do
+      action :install
+   end
+   
+6. Next, make the Apache service to start automatically at the system startup and also the service should be up and running. 
+   Below code does what we required.
+   
+   service 'httpd' do
+      action [ :enable, :start ]
+   end
+   
+7. Index File:
+
+ Our next resource is for placing the index.html file on the document root of Apache server.
+ All you need to specify the location where want the file and from where to get the file.
+ 
+    cookbook_file "/var/www/html/index.html" do
+
+	source "index.html"
+       mode "0644"
+    end
+
+8. Creating the Index File:
+	
+Since we have defined a “cookbook_file” resource, we need to create 
+a source file “index.html” inside files subdirectory of your cookbook.
+
+   cd ~/chef-repo/cookbooks
+   
+9. Create a subdirectory “files” under your cookbook.
+    
+    mkdir httpd/files
+
+10. Add a simple text into the index.html.
+
+     echo "Installed and Setup Using Chef" > httpd/files/index.html
+
+11.  Firewall:
+
+Our last resource will be for configuring the firewall to allow http and https traffic from external machines.
+
+       execute 'httpd_firewall' do
+         command '/usr/bin/firewall-cmd  --permanent --zone public --add-service http'
+         ignore_failure true
+       end
+
+       execute 'reload_firewall' do
+         command '/usr/bin/firewall-cmd --reload'
+         ignore_failure true
+       end	
+
+12.  The final version of default.rb will look like below.
+ 
+      vi ~chef-repo/cookbooks/httpd/recpies/default.rb
+
+
+
+
+#
+# Cookbook Name:: httpd
+# Recipe:: default
+#
+# Copyright (c) 2016 The Authors, All Rights Reserved.
+
+package 'httpd' do
+  action :install
+end
+
+service 'httpd' do
+  action [ :enable, :start ]
+end
+
+cookbook_file "/var/www/html/index.html" do
+  source "index.html"
+  mode "0644"
+end
+
+execute 'httpd_firewall' do
+  command '/usr/bin/firewall-cmd  --permanent --zone public --add-service http'
+  ignore_failure true
+end
+
+execute 'reload_firewall' do
+  command '/usr/bin/firewall-cmd --reload'
+  ignore_failure true
+end
+
+
+
+==========================
+
+
+Upload the cookbook:-
+
+1. Once your cookbook is complete, you can upload them on to your Chef server.
+    
+	knife cookbook upload httpd
+
+2. Check whether you can list the cookbook that you just have been uploaded.
+
+   knife cookbook list
+
+3. To remove the cookbook (optional).
+
+   knife cookbook delete cookbook_name
+
+ ====================================
+ 
+ Add the Cookbook to your node:
+ 
+1 .You can add a cookbook to the run_list of a particular node using the following command.
+   Replace chefclient.itzgeek.local with your client node name.
+   
+      knife node run_list add chefclient.itzgeek.local httpd
+	  
+	  
+Output:-
+
+    chefclient.itzgeek.local:
+      run_list: recipe[httpd]
+
+2. To remove the particular recipe from run_list (optional).
+
+     knife node run_list remove chefclient.itzgeek.local recipe[cookbook_name]
+
+	 
+===================
+	  

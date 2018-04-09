@@ -1,0 +1,59 @@
+
+
+Apache Installation from Source Code
+
+
+
+1. first launch ec2 instance 
+
+2. create a directory in /opt like apache (mkdir apache)
+
+3. goto apache directory (cd apache)
+
+4. install wget (install wget -y)
+
+5. goto browser get the soucrce https://httpd.apache.org/download.cgi
+
+6. from there copy link address like Source: httpd-2.4.29.tar.gz
+
+7. wget httpd-2.4.29.tar.gz
+
+8. tar -xvzf httpd-2.4.29.tar.gz
+
+9. httpd-2.4.29 (after tar)
+
+10. change the ownership to httpd-2.4.29 (chown -R root:root httpd-2.4.29)
+
+[root@ip-172-31-25-182 apache]# chown -R root:root httpd-2.4.29 )
+ 
+11. cd httpd-2.4.29
+
+12. ./configure (here checking the all the dependies are available and OS comparabality) we need some compilers like apr and gcc
+
+13 go to browser download apr download (apr= apache run time environment) https://apr.apache.org/download.cgi
+
+14. copy link adress Unix Source: apr-1.6.3.tar.gz [PGP] [MD5] [SHA1] [SHA256]
+
+15. cd apache here wget apr-1.6.3.tar.gz
+
+16. here tar tar -xvzf apr-1.6.3.tar.gz
+
+17.  change ownership to apr-1.6.3 (chown -R root:root apr-1.6.3)
+
+18 cd apr-1.6.3 next do ./configure neex make and make install
+
+19. look for gcc compiler (here we are not getting gcc compiler for only this will go with yum)
+
+20 cd apaache from here yum install gcc
+
+21 goto cd httpd-2.4.29 ---> ./configre (error: APR-util not found)
+
+22. goto browser and copy link adress https://apr.apache.org/download.cgi
+
+23. copy link address Unix Source: apr-util-1.6.1.tar.gz [PGP] [MD5] [SHA1] [SHA256]
+
+24. cd apache  and wget apr-util-1.6.1.tar.gz
+
+25. tar -xvzf apr-util-1.6.1.tar.gz and will get apr-util-1.6.1 direcory change ownership chown -R root:root apr-util-1.6.1
+
+26. 

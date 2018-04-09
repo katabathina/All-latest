@@ -1,0 +1,362 @@
+
+Wipro 
+
+===========
+
+1. Ansible Architecture and how its work?
+2. What are the main advantages using ansible?
+3. How will access list of ansible variables ( Thruogh command line )
+4. What is Ansible galaxy? what it differs?
+5. How will connect nodes to ansible? (Thruogh command line)
+6. What is Playbook? and what content?
+7. What is the format for playbook?
+
+1. Explain Chef Architecture?
+2. What is the Recipe?
+3. How will differentiate with recipe and cookbook?
+4. What is the default action in chef?
+5. What is the commnad upload cookbook in chef-server?
+
+1. How will find the java process?
+2. What is the purpose of export command?
+3. I have a file and i want to get only third column from the file?
+4. How will change the permissons for file?
+5. What are the different file types?
+6. Permissions type?
+
+
+1. How will do the things in crontab?
+2. I want to create a perticular job in jenkin, how you can achieve?
+3. What is pipe line?
+4. What is the main file in Maven? (pom.xml) important configuration file in maven :settings.xml
+5. What are the scope types in maven?
+6. What is artfactory?
+
+1. What are the cloud service model?
+2. Route 53 policies?
+3. What is the purpose fo cloudwatch?
+4. What is the structure of  vpc and subnet?
+5. How will create IAM role? how will create policies in  IAM?
+6. Can you differentiate scalability and elacity?
+7. What is Autoscaling?
+8. What is the differece bitween vertical and horizontal scaling?
+
+
+========================================================================
+
+
+Ricoh:- 
+
+========
+
+1. Write a script find the users exist or not?
+2. Write a playbook install apache ,mysql and start--->
+   if already install not required to install and start the service.
+3. Daily responsibilty
+4. If application down/Slow what you will do?
+5. How to create vpc?
+6. Why you are maintaing dev,test,pre-pro and producion environments?
+7. Intially while creating rds you are not required automatic backup by aws.
+   later i want automatic backup how you will do?
+8. Do you know networking?
+9. Which aws account you have?
+10. Which purpose your using root account?
+
+
+========================================================================
+
+HP:-
+
+==========
+
+1. In a file i hava 20 lines and 2 lines were duplicate how you will delete thruogh script?
+2. My jenkins is in windows box how you will deploy a file to linux nodes?
+3. Write a script to deploy a file to servers and after that restart , I have to know the status as well.
+4. How you will copy files from windows to linux? without filezilla or winscp?
+5. How you will migrate svn code into github repository?
+6. How to find 100 GB files and delete.
+7. How to deploy a file to specific nodes.
+8. Have you integrated jenkins with chef/ansible.
+9. What is the artfacts?
+
+===================================================================
+
+NTT Data:-
+
+=============
+1. What is Devops?
+2. What is your role?
+3. I have 10 Developers, if i hire you as devops engineer what will you do?
+4. what is vpc?
+5. how you will get the issues?
+6. what is the difference b/w ansible and chef?
+7. why your using both ansbile and chef?
+8. how it will work jenkins?
+9. What is pipeline?
+10. how to you will create a pipeline?
+11. can you explain the build process?
+12. how you will do deployments in you environment?
+13. What are the issues you faces in build failure?
+14. What type of jobs you build?
+15. Can you monitor jobs through monitoring tool?
+
+============================
+
+Neustar Data labs:-
+
+================== 
+1. What is the difference b/w ebs and s3?
+2. how you create a file system?
+3. what is top commnad and what are the parameters will come and explain it?
+4. I have a file and how will replace a perticular key word?
+5. how you will create heap dumps?
+6. Apache ssl process?
+7. What is vpc?
+8. what is the differencd b/w public and private subnet?
+9. how you will change private subnet as public subnet?
+10. Write a playbook to copy files from local system to remote system , in remote system compile
+    all files and create a jar file and copy to local system.
+11. Write a shell script to copy files from local system to remote system , in remote system compile
+    all files and create a jar file and copy to local system.
+12. I have a file with 100 lines and how you will display 50th to 60 line.
+13. I attached a volume with 100 gb, how you will create a /mnt/temp-70gb remaining 30gb /mnt/sample.
+14. What is CI/CD?
+15. Tomcat installation process?
+16. what is the difference b/w ansible and chef?
+17. How you will mount s3 bucket to ec2 machine?
+
+============================================
+
+Neno soft solution:
+====================
+1. Can write cookbook for apache installation and start.
+2. create a one private and one public subnet in vpc, after that install ansible and write a playbook
+  to intall apache.
+
+==============================================
+
+Compassite IT:-
+
+====
+
+1. how to change hostname permanently. (/etc/Sysconfig/network)
+2. we can add multiple ips to server. (yes)
+3. 4cpus core what is maximum utlization for that?
+4. what is swap memory? (swap memory is stores a disk)
+5. what is Inode?(is data structure stores each and every file and direcory information)
+6. what is the diff b/w df and du. (df display file systems, du for directories)
+7. what is elasticip and why your using it?(
+8. what is s3? and what is the diff b/w ebs and s3?
+9. what is reserved instance and feature instance? (when we were buying instances we have options reserved,feautures is less amount)
+10. how you uploading files to s3?
+11. what is auto configure in auto scaling?
+12. IAM role questions.( users and gruops related)
+13. what is RDS? (multiple questions)
+14. how you monitor your environment? (Nagios,cloudwatch)
+15. developer unable to connect linux machine what you will do?
+16. how you will tack db backup command? and replace command?
+17. Memory full how you will check?
+18. what is zombiee process?
+19. how to add add mysql port number?
+20. what is subnet?
+21. what is listner?
+22. Can we change apache portnumber and where?
+23. what is document root?
+24. how it will show which file has to show main page?( Directory Index).
+25. how will check apache modifacation syntax?
+26. I have to start services like os level how you will do?
+27. where you will do bootup in ec2 level?
+28. What is vpc peering?
+28. ssl process webserver level?
+29. ssl which level we can configure?
+30. what is privat and public subnet?
+31. how many files are they in linux? 7 files.
+32. CPU consumption is more how you will solve?
+32. what are the components is there in route 53?
+33. what are the load balancers are available aws?
+
+
+1. Can we increase volume size of a RUNNING ec2 instance?
+2.  s3 is  cheaper than glacier?
+3. Is elastic IP attached to a instance chargeable?
+4. Elastic IP is a private IP.
+5. Is it possible to communicate with two different VPCs?
+6. Can we install SSL certificate in load balancer level?
+7. Can we take AMI of a server without reboot?
+8. Snapshot works on instance level or volume(disk) level?
+9. RDS is cheaper then EC2?
+10. Can we reboot a server from AWS console ?
+11. Basic linux commands:-
+     List files/folders – ls/Correct
+	 Make directory – mkdir/Correct
+	 Remove file – rm/Yes
+	 Rename file – mv/no
+	 copy file – cp/Yes
+12. Command to check Linux OS version?
+13. How to check free disk space?
+14. How to check available RAM ?
+15. Port number of basic services/protocols :
+    SSH : 22/Yes
+	FTP : 20,21 /(Not remember)
+	SFTP : 22/(Not remember)
+	HTTP : 80/Yes
+	HTTPS : 443 (Secure) /No
+	IMAP : 143/No (Intenet access map protocal)
+	POP3 : 110/No (post office protocal version3)
+	SMTP : 25 /-(Simple mail transfer protocal)
+	MySQL : 3306 /-
+	
+16. IMAP protocol is for SENDING emails. Ture/False.
+17. Linux command to check server date?
+18. Can we change SSH port number of a AWS server?
+19. How to check Apache version?
+20. How to check apache configuration syntax?
+
+ 2nd round:-
+ 
+1. What is the daily task in apache?
+2. If produciton server is how you route cause?
+ 
+ Ex:- now time is 4 , like service is crashed or reboot at 3.30 ,you got a incident ticket
+  for route cause? how you find the issue thurogh route cause?
+  3.30 to 4 how much ram cpu utilizaton i need know how you will find? 
+3. how to troubleshoot logs? any command ?
+4. hardware level server troubleshoot command?
+5. what is the purpose of traceroute command?
+6. Do you know SAR command?
+7. Do you know network level commands?
+8. I want to know perticular service is running or not how you will ckeck?
+9. Do you use screen command?
+1o. how you run job in baground?
+11. how you create a file system?
+14. if you want to create a ext4 file system, what command we use?
+15. what is the difference b/w ext3 and ext4?
+16. if the file system is corupted how yor restore it?
+    exp: i monuted volume in /mnt, my /mnt is corrupted how you recover it?do you know commnad?
+17. how many user logged in linux operating system how you will find it?
+18. In Application support what type task you do daily?
+19. when you will for incident tickets and change management?
+20. how you monitoring you environment?
+21. In nagios can you see graph level or how you will see?
+22. Apache mysql services has to be autostarted? what you will do?
+    ex:whenever system reboots apache,mysql autostarts?
+23. what are the run levels?
+24. i want to configure and start  apache at specific runlevel like 3,5?
+25. what is the diff b/w tar and zip?
+26. what is the diff b/w tar,zip,bz or gz?
+27. if i change any existing configuration changes in apache, how i will check syntcax is correct or not?
+28. what are the linux environments you worked?
+29. what is thd diff b/w redhat and ubuntu?
+30. How you install LAMP in linux operating system?
+31. Do you have any experience in mysql how to take backup and restore?
+32. What is the master and slave?(DB)
+33. If master is down, slave will work?
+34. master is replicating to the slave or slave is replicating to master?
+35. what is the command change ownership?
+36. what is the command change permissions?
+37. 755 what is that? 
+38. what is the default permission for file?
+39. what is .htaccess file?
+40. what is the difference b/w vertual host and .htaccess file?(why we go for .htaccess file instead of virual host)?
+  ex:- if put some role in .htaccess file what is the scope and i put some role in virual host
+       what is the scope?
+41. how you add new yum repositories?
+42. you have a source code pacage in repository how you will configure in your system?
+43. what configure does?
+44. for Compile the code what you have to be there in your system?
+45. compiler command not found what you have to do?
+46. In linux do you know how to setup nis, samba,dns?
+47. What are the things you can monitor in splunk?
+48. In shell script what are the things your familier?
+49. write a shell script for apache restart i need restart at 5am everyday.
+50. Do you work on window server?
+51. can you install active direcatory create a group policies in window server?
+52. Do you know any other clouds other than aws?
+53. what is the diff b/w google app engine and google cloud platform?
+54. what is inventory file in Ansible?
+55. how to copy file from one repository to another repository?
+56. file system is full reaches to 100% how you will solve?
+57. how you find  high space using files?
+58. i want to  increase root volume spache how you will do that?
+    Ex:- root volume reached 100% and you allocated 200gb to /root volume. how does system
+	  understands 200gb allocated to /root volume.
+59. you created a user with sudoer permissions, you want to use that user in script like
+     for staring apache services dont want ask password every time. what you will do?
+60. In AWS services you know?
+61. what is the difference b/w NAT gateway and NAT instance?
+62. what is security group and NACL?
+63. i have a elb-->elb have 2 servers, one is inservice and another one is outofservice
+    request goes to both the servers?
+64. how Elb understands request forwards to specific server?
+65. what is listner?
+66. what is detailed monitoring in cloudwatch?
+67. what is the differences b/w default and detailed monitoring?
+68. can we use cloudwatch for billing kind of alerts?
+    ex:- i buy a service for month i have limit is for $500  if i reaches that limit with in 20day
+	   will get alert using cloudwatch?
+69. what is multifactor authentication?
+70. what is IAM module?
+71. what is difference b/w ondemand service and reserved instance?
+72. what are the costs of reserved instances?
+73. you have elb--> 2 servers attached, how you will create record in dns?
+74. elb ips keep change?
+75. Do you use SES service(Simple Email Service).
+76. from aws your using any CI/CD tools(like code pipeline)
+77. what is the diffence b/w AMI and Snapshot?
+78. can we mount s3 bucket to ec2 machine? and why it is not recommended?
+79. custom AMI can we move from one accout to different accout?
+80. what is the diff b/w ebs and s3?
+81. can we edit files in s3?
+82. Do you worked on proxy servers like HA Proxy?
+
+
+
+ 
+
+
+  
+===============
+
+Wipro:- 	
+=====
+1. What are the services you know in aws?(ec2,vpc,s3,IAM,elb,alb,cloudformation,rds)
+2. How to restart jenkins?
+Ans:- two ways manually and plugins
+    1. manually restart 	go to browser-http://18.217.32.63:8080/jenkins/restart
+	   manually saferestart also go to browser-http://18.217.32.63:8080/jenkins/safeRestart
+  	2. download safeRestart plugin from jenkins performance plugins and install in jenkin.
+	
+3. How many ways write jobs in jenkins? i know only one play is jenkins console.
+4. what are commands you use with internet and without internet in GIT?
+5. what are the differences b/w svn and git?
+6. what is differnece b/w git pull and push?
+7. tell me few commands in git?
+8. how you integreate maven with jenkins?
+9. how you install plugins in jenkins?
+10 i hava a note pad file, in that file i have all window commands i want to 
+   install putty in windows throgh cmd prompt.
+11. what is the difference b/w ansible,chef and puppet?
+12. what is cloudwatch?
+13. what is splunk?
+14. what is sed? (stream editor)
+15. what is awk?
+16. what is IAM?
+17. Do you know how to write mysql queries?
+18. Do you have banking domain experience?
+19. If i give you project lead role will you handle?
+20. under you have one persion reporting to you..if direcly send mail to client how you will handle?
+21. we can install ansible in windows?
+22. what is load balancer?
+23. what is route 53?
+24. how many ways creating a file in linux?(vi ,vim,cat,echo,touch)
+25. how to change existing file time stamp?
+
+========================
+
+
+
+
+
+
+
+

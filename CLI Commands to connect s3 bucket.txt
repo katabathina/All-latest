@@ -1,0 +1,54 @@
+
+
+CLI Commands:--
+
+1 .Creating S3 bucket thruogh CLI
+
+aws s3 mb s3://mybucket
+
+aws s3 mb s3://mybucket --region us-west-1
+
+
+if you get below error:
+
+make_bucket failed: s3://katabathina Could not connect to the endpoint URL: "https://s3.us-east-2b.amazonaws.com/katabathina"
+
+[default]
+region=us-east-1a
+...
+
+Fix the region to region=us-east-1 and then the command will work correctly
+
+ aws s3 mb s3://katabathina
+ make_bucket: katabathina
+ 
+ Removing Buckets
+ 
+ $ aws s3 rb s3://bucket-name   --->rb is the command
+ 
+ $ aws s3 rb s3://bucket-name --force  --->To remove a non-empty bucket, you need to include the --force option.
+ 
+ s3 cp H:\AWS\Keys s3://katabathina --recursive --- local system to s3 copy
+ 
+ aws s3 rb s3://katabathina11 --force  ----> remove bucket..
+ 
+ 
+ ============================================================
+ 
+cp
+ls
+mb
+mv
+presign
+rb
+rm
+sync
+website
+
+
+==========================================
+cloudformation 
+
+aws cloudformation create-stack --template-body file://ec2_1.txt  --stack-name single3-instance --parameters ParameterKey=KeyName,ParameterValue=cfdemo ParameterKey=InstanceType,ParameterValue=t2.micro
+
+

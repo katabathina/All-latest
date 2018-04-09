@@ -1,0 +1,58 @@
+
+Domain registration:-
+
+katabathina
+Sreedhar@31190
+0527
+
+===
+GoDaddy --website domain provider
+==========
+first i have create account, after that choose domain name like what you want
+
+ i registered name like "cloudengineers.org"
+ 
+ 
+ Next
+ 
+ Aws console-->route53-->under DNS Management--> create a hosted zone.
+ 
+ --> select domain name, comment and select.
+ like:- domain name:cloudengineers.org commemt:education type:public hosted zone.
+ --> click on create a record set NS:- 
+ ns-459.awsdns-57.com
+ ns-737.awsdns-28.net
+ ns-1109.awsdns-10.org
+ ns-1718.awsdns-22.co.uk
+ 
+ register these name server into godaddy site.
+ 
+ -->login to godaddy
+ 
+ Set custom nameservers for domains registered with GoDaddy
+ 
+ 1.Click a domain name in the list below to go to its DNS Management page:
+  Cloudengineers.org
+ 2.On the DNS Management page, under Nameservers, click Change.
+ 3.Under Choose your new nameserver type, select Custom
+ 4.Enter the custom nameservers your hosting provider gave you and click Save.
+  
+  like:-
+  ns-459.awsdns-57.com
+ ns-737.awsdns-28.net
+ ns-1109.awsdns-10.org
+ ns-1718.awsdns-22.co.uk
+  
+  
+    After updating your nameservers, allow 4 to 8 hours for other networks to access information for .com and .net domain names, and allow 24 to 48 hours for other networks to access information for all other domain extensions.
+	If you have difficulty, contact our 24/7 technical support team for assistance
+	
+-->Next come to route53 --->under DNS management-->Hosted zones (select)--> 
+  select domain name--> create record set (select)->give details like name:-
+  test.cloudengineers.org, type:-A-ipv4 address, Alias: yes, Alias Target:-
+  alb-lb(alb load balancer)-->next select create.
+  
+=============================================
+  
+  
+  

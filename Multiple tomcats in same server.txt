@@ -1,0 +1,70 @@
+
+
+Apache to tomcat integration (one apache two tomcats vertical loadbalancer) vertical means--same server.
+
+1 first create a server and install apache (yum install httpd -y)
+
+2 start apache (systemctl start httpd)
+
+3. create tomcat server 
+
+4. install java (yum install java * -y)
+
+5. download tomcat from browser (wget tomcat link)
+
+6. unzip (unzip tomcat zip file)
+
+7. for two tomcat cats change name for differention (one tomcat second tomcat2)
+
+tomcat one run on 8080 port and second tomcat2 you have change port no 8108
+
+goto server.xml
+
+8005---->8105
+8080---->8180
+8443---->8543
+8009---->8109
+
+
+8. start both the tomcats (tomcat tomcat2)
+
+9. downlaod shoppingcart.war file from browser.
+
+10. place in both the tomcats webapps
+
+12. next go to apache server vi /etc/httpd/conf/httpd.conf/httpd
+
+13.  <virtualHost *:80>
+        ServerName www.shoppingcart.test.com
+        RedirectMatch  ^/$ /shoppingcart/
+
+        ProxyRequests off
+        ProxyPreserveHost on
+        ProxyPass /shoppingcart  balancer://shr stickysession=JSESSIONID
+        ProxyPassReverse /shoppingcart balancer://shr stickysession=JSESSIONID
+
+        <Proxy balancer://shr>
+                BalancerMember http://ec2-34-216-98-125.us-west-2.compute.amazonaws.com:8080/shoppingcart
+                BalancerMember http://ec2-34-216-98-125.us-west-2.compute.amazonaws.com:8180/shoppingcart
+
+        </Proxy>
+
+        <Location /balancer-manager>
+
+                SetHandler balancer-manager
+
+        </Location>
+		
+
+14. stop and start Apache (Systemctl stop httpd and Systemctl start httpd)
+
+15. if not start or any error disable selinux
+
+    getenforce
+    setenforce 0
+
+16 go and check in browser apache public ip result come like this http://52.11.248.147/shoppingcart/
+
+17 if you want check balancer manager search like http://52.11.248.147/balancer-manager
+
+	

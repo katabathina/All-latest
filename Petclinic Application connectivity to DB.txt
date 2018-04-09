@@ -1,0 +1,73 @@
+Tomcat to MySql connectivity
+
+
+Download petclinci.war : http://cliqr-appstore.s3.amazonaws.com/petclinic/petclinic.war
+
+mysql downlaod:yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+
+1)install the mysql( yum install mysql-server*) if not work this try above mysql link
+
+2)start the mysql ( service mysqld start) and check if mysql started or not. ( ps -ef | grep mysql)
+service mysqld status
+netstat -anlp | grep ":3306"
+
+3)Grep the mysql user root password.
+	
+take the password and connect to mysql-server*
+mysql -h <hostname/ip/endpoint> -u <user> -p <fectedpassword> 
+
+for ex:
+mysql -h localhost -u root -p 
+enter your fetched password
+
+4)Reset the mysql password( Being in mysql prompt)
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('MyNewPass');
+
+ SET PASSWORD FOR 'root'@'localhost' = PASSWORD('Test1234');
+ 
+ 5)Create a petclinic db in mysql. ( CREATE DATABASE petclinic;)
+ 
+
+6) Download the war file from your s3 url and upload into tomcat webapps.(tomcat has to be running status and access petclinic once)
+
+7)stop tomcat and from webapps folder delete/move the petclinic.war( now you have petclinic expldoed directory in webapps folder)
+
+8)in webapps/petclinic/WEB-INF/classes/db/mysql/initDB.sql ( update the db username and password 2 lines)
+for ex: GRANT ALL PRIVILEGES ON petclinic.* TO root@localhost IDENTIFIED BY 'Login@123';
+
+
+9)update data-access.prop with mysql entries.
+petclinic/WEB-INF/classes/spring
+
+remove all HQL and MS-SQL. ( keep only mysql lines and remove #(comments))
+for ex:
+jpa.showSql=true
+
+#-------------------------------------------------------------------------------
+# MySQL Settings
+
+jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/petclinic
+jdbc.username=root
+jdbc.password=Login@123
+
+# Properties that control the population of schema and data for a new data source
+jdbc.initLocation=classpath:db/mysql/initDB.sql
+jdbc.dataLocation=classpath:db/mysql/populateDB.sql
+
+# Property that determines which Hibernate dialect to use
+# (only applied with "applicationContext-hibernate.xml")
+hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+# Property that determines which database to use with an AbstractJpaVendorAdapter
+jpa.database=MYSQL
+
+
+10)next download the mysql connector jar and place it in tomcat/lib.
+mysql-connector-java-5.1.5-bin.jar
+
+11) start the tomcat and find if any errors are comming related to mysql(SQLSEver exceptions ignore)
+
+
+
+
